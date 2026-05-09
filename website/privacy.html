@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>隱私 · HYSN.NET</title>
+  <meta name="description" content="HYSN.NET 的隱私說明——一紙坦白。" />
+  <meta name="author" content="Harrison" />
+  <meta name="theme-color" content="#F8F4EC" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="canonical" href="https://www.hysn.net/privacy.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="HYSN.NET" />
+  <meta property="og:title" content="隱私 · HYSN.NET" />
+  <meta property="og:description" content="HYSN.NET 的隱私說明——一紙坦白。" />
+  <meta property="og:url" content="https://www.hysn.net/privacy.html" />
+  <meta property="og:locale" content="zh_Hant" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="隱私 · HYSN.NET" />
+  <meta name="twitter:description" content="HYSN.NET 的隱私說明——一紙坦白。" />
+
+  <link rel="icon" type="image/svg+xml" sizes="any" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23F8F4EC'/%3E%3Cpath%20d='M20%2014C19%2024%2019%2039%2020%2050M44%2014C43%2024%2043%2039%2044%2050M20%2031C26%2029%2032%2029%2044%2031'%20fill='none'%20stroke='%231B3A5C'%20stroke-width='4.2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "隱私",
+    "url": "https://www.hysn.net/privacy.html",
+    "description": "HYSN.NET 的隱私說明——一紙坦白。",
+    "inLanguage": "zh-Hant",
+    "isPartOf": { "@type": "WebSite", "url": "https://www.hysn.net/", "name": "HYSN.NET" },
+    "author": { "@type": "Person", "name": "Harrison" }
+  }
+  </script>
+
+  <script>
+    (function () {
+      var theme = "light";
+      try {
+        var stored = localStorage.getItem("hysn-theme");
+        if (stored === "dark" || stored === "light") theme = stored;
+        else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) theme = "dark";
+      } catch (e) {
+        if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) theme = "dark";
+      }
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+TC:wght@400;500;600&display=swap" />
+
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #F8F4EC;
+      --bg-warm: #F3EEE4;
+      --bg-soft: rgba(248, 244, 236, 0.82);
+      --panel: rgba(245, 240, 230, 0.80);
+      --panel-solid: #F3EEE3;
+      --text: #1F1B16;
+      --text-secondary: #524838;
+      --muted: #766B5A;
+      --muted-light: #A39A89;
+      --line: rgba(31, 27, 22, 0.12);
+      --line-strong: rgba(31, 27, 22, 0.24);
+      --accent: #1B3A5C;
+      --accent-soft: rgba(27, 58, 92, 0.09);
+      --accent-hover: #264F7A;
+      --accent-2: #8B6F3F;
+      --accent-2-soft: rgba(139, 111, 63, 0.11);
+      --shadow: 0 8px 32px rgba(31, 27, 22, 0.06);
+      --shadow-md: 0 12px 40px rgba(31, 27, 22, 0.08);
+      --radius: 16px;
+      --serif: "Cormorant Garamond", "Noto Serif TC", "EB Garamond", Georgia, serif;
+      --body: "EB Garamond", "Noto Serif TC", "Cormorant Garamond", Georgia, serif;
+      --mono: "JetBrains Mono", ui-monospace, "SF Mono", "Menlo", monospace;
+      --transition: 300ms cubic-bezier(.2,.8,.2,1);
+      --ease-out: cubic-bezier(.2,.8,.2,1);
+    }
+
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #141110;
+      --bg-warm: #1B1816;
+      --bg-soft: rgba(20, 17, 16, 0.85);
+      --panel: rgba(27, 24, 22, 0.82);
+      --panel-solid: #201D1A;
+      --text: #EFE8DC;
+      --text-secondary: #BFB5A4;
+      --muted: #938875;
+      --muted-light: #615647;
+      --line: rgba(239, 232, 220, 0.10);
+      --line-strong: rgba(239, 232, 220, 0.22);
+      --accent: #8AB0D4;
+      --accent-soft: rgba(138, 176, 212, 0.14);
+      --accent-hover: #A3C2DE;
+      --accent-2: #D4A866;
+      --accent-2-soft: rgba(212, 168, 102, 0.14);
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+      --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.28);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: var(--text);
+      background: var(--bg);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.78;
+      letter-spacing: 0.005em;
+      transition: background-color var(--transition), color var(--transition);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    /* ── Reading progress bar (top) ── */
+    .reading-progress {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      z-index: 200;
+      pointer-events: none;
+      background: transparent;
+    }
+    .reading-progress__fill {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 8px rgba(27, 58, 92, 0.25);
+      transform-origin: left center;
+      transition: width 80ms linear;
+    }
+    html[data-theme="dark"] .reading-progress__fill {
+      box-shadow: 0 0 10px rgba(138, 176, 212, 0.30);
+    }
+    @supports (animation-timeline: scroll()) {
+      .reading-progress__fill {
+        width: 100%;
+        transform: scaleX(0);
+        transition: none;
+        animation: reading-progress-grow linear forwards;
+        animation-timeline: scroll(root);
+      }
+      @keyframes reading-progress-grow {
+        to { transform: scaleX(1); }
+      }
+    }
+
+    /* ── Header ── */
+    header.site-header {
+      padding: 22px 28px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 0.92rem;
+      letter-spacing: 0.08em;
+      color: var(--text);
+      transition: color var(--transition);
+    }
+    .brand:hover { color: var(--accent); }
+    .brand svg { width: 26px; height: 26px; }
+
+    .header-controls {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* ── Lang switch with sliding spring pill ── */
+    .lang-switch {
+      position: relative;
+      display: inline-flex;
+      align-items: stretch;
+      gap: 0;
+      padding: 3px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: transparent;
+      transition: border-color 220ms ease;
+      --lang-count: 3;
+      --lang-index: 0;
+    }
+    .lang-switch:hover { border-color: var(--line-strong); }
+    .lang-switch::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      bottom: 3px;
+      width: calc((100% - 6px) / var(--lang-count));
+      left: calc(3px + var(--lang-index) * (100% - 6px) / var(--lang-count));
+      background: linear-gradient(180deg, var(--bg-soft) 0%, var(--accent-soft) 100%);
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+      box-shadow:
+        0 4px 14px rgba(27, 58, 92, 0.20),
+        inset 0 1px 0 rgba(255, 255, 255, 0.55);
+      transition:
+        left 520ms cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 360ms ease,
+        opacity 220ms ease;
+      z-index: 0;
+      pointer-events: none;
+    }
+    html[data-theme="dark"] .lang-switch::before {
+      box-shadow:
+        0 4px 14px rgba(138, 176, 212, 0.26),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+    .lang-switch:hover::before {
+      box-shadow:
+        0 6px 18px rgba(27, 58, 92, 0.26),
+        inset 0 1px 0 rgba(255, 255, 255, 0.55);
+    }
+    .lang-switch:not(.is-ready)::before { opacity: 0; }
+    .lang-btn {
+      position: relative;
+      z-index: 1;
+      min-width: 38px;
+      height: 28px;
+      padding: 0 10px;
+      border-radius: 999px;
+      color: var(--muted);
+      background: transparent;
+      font-family: var(--serif);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      transition: color 280ms cubic-bezier(.2,.8,.2,1), transform 280ms cubic-bezier(.2,.8,.2,1);
+    }
+    .lang-btn:hover {
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+    .lang-btn.is-active {
+      color: var(--accent);
+      transform: translateY(0);
+    }
+    .lang-btn.is-active:hover { transform: translateY(0); }
+
+    /* ── Theme toggle (matches index.html) ── */
+    .theme-toggle {
+      position: relative;
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      background: transparent;
+      overflow: hidden;
+      transition:
+        color var(--transition),
+        border-color var(--transition),
+        background var(--transition),
+        box-shadow var(--transition),
+        transform var(--transition);
+    }
+    .theme-toggle:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      box-shadow:
+        0 6px 16px rgba(31, 27, 22, 0.08),
+        0 0 0 5px var(--accent-soft);
+      transform: translateY(-2px);
+    }
+    html[data-theme="dark"] .theme-toggle:hover {
+      box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.28),
+        0 0 0 5px var(--accent-soft);
+    }
+    .theme-toggle::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, var(--accent) 0%, var(--accent) 38%, transparent 72%);
+      opacity: 0;
+      transform: scale(0.4);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .theme-toggle--ripple::after {
+      animation: theme-ripple 620ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    @keyframes theme-ripple {
+      0%   { opacity: 0.45; transform: scale(0.4); }
+      70%  { opacity: 0.20; }
+      100% { opacity: 0;    transform: scale(5.5); }
+    }
+    .theme-toggle__icon {
+      position: relative;
+      z-index: 1;
+      font-size: 1rem;
+      display: inline-block;
+      transition:
+        transform 480ms cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity 280ms ease-out;
+    }
+    .theme-toggle:hover .theme-toggle__icon {
+      transform: rotate(-22deg) scale(1.15);
+    }
+    .theme-toggle--swapping .theme-toggle__icon {
+      transform: rotate(220deg) scale(0.2);
+      opacity: 0;
+      transition:
+        transform 240ms cubic-bezier(0.55, 0, 0.68, 0.19),
+        opacity 200ms ease-in;
+    }
+
+    /* ── Main / page-as-folio ── */
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: clamp(48px, 8vw, 96px) 24px clamp(64px, 8vw, 96px);
+    }
+
+    .folio {
+      width: 100%;
+      max-width: 680px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(24px, 3.5vw, 38px);
+    }
+
+    /* ── Bookend-style title block ── */
+    .bookend-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+    }
+    .bookend-year {
+      color: var(--accent-2);
+      font-weight: 600;
+      letter-spacing: 0.36em;
+    }
+    .bookend-mark-sep {
+      width: 28px;
+      height: 1px;
+      background: var(--line-strong);
+    }
+    .bookend-kicker { color: var(--muted); }
+
+    .doc__title {
+      margin: 0;
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      line-height: 1.12;
+      color: var(--text);
+      letter-spacing: 0.015em;
+      text-align: center;
+      text-wrap: balance;
+    }
+    /* Kinetic title — opens loose, settles in once fonts load */
+    .doc__title--kinetic {
+      letter-spacing: 0.08em;
+      transition: letter-spacing 1600ms cubic-bezier(0.22, 1, 0.36, 1), opacity 600ms var(--ease-out);
+    }
+    .fonts-loaded .doc__title--kinetic {
+      letter-spacing: 0.015em;
+      transition-delay: 600ms, 0ms;
+    }
+
+    .bookend-ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      color: var(--accent);
+      width: 100%;
+      max-width: 420px;
+    }
+    .bookend-ornament::before,
+    .bookend-ornament::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+    .bookend-ornament .fleuron {
+      font-size: 1.15rem;
+      line-height: 1;
+      color: var(--accent-2);
+      opacity: 0.85;
+    }
+
+    /* ── Italic lede whisper ── */
+    .doc__lede {
+      margin: 0;
+      max-width: 600px;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.16rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      text-align: center;
+      text-wrap: balance;
+    }
+
+    /* ── Body prose ── */
+    .doc__body {
+      width: 100%;
+      max-width: 620px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .doc__body p {
+      margin: 0;
+      font-family: "Noto Serif TC", var(--body);
+      color: var(--text-secondary);
+      line-height: 1.95;
+    }
+    .doc__body strong { color: var(--text); font-weight: 500; }
+    .doc__body a {
+      color: var(--accent);
+      border-bottom: 1px solid var(--line);
+      transition: border-color var(--transition), color var(--transition);
+    }
+    .doc__body a:hover {
+      border-bottom-color: var(--accent);
+      color: var(--accent-hover);
+    }
+
+    /* Third-party list — em-dash bullets, indented rule */
+    .doc__list {
+      list-style: none;
+      padding: 4px 0 4px 18px;
+      margin: 4px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-left: 2px solid var(--line);
+    }
+    .doc__list li {
+      margin: 0;
+      font-family: "Noto Serif TC", var(--body);
+      color: var(--muted);
+      font-size: 0.97rem;
+      line-height: 1.65;
+    }
+    .doc__list strong {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 500;
+      color: var(--text);
+      margin-right: 4px;
+    }
+
+    /* Closing italic whisper before the printer's mark */
+    .doc__meta {
+      margin: clamp(8px, 2vw, 18px) 0 0;
+      max-width: 580px;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* ── Printer's mark (Aldus-style) ── */
+    .printers-mark {
+      margin-top: clamp(20px, 4vw, 36px);
+      padding-top: clamp(28px, 5vw, 44px);
+      width: 100%;
+      max-width: 420px;
+      border-top: 1px dashed var(--line);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+    .printers-mark__device { width: 56px; height: 56px; opacity: 0.92; }
+    .printers-mark__device svg { width: 100%; height: 100%; }
+    .printers-mark__year {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.36em;
+      color: var(--muted);
+    }
+    .printers-mark__motto {
+      margin-top: 2px;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding: 20px 28px 32px;
+      text-align: center;
+      color: var(--muted-light);
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+    }
+
+    /* ══════════════════════════════════════════
+       REVEAL ANIMATIONS — staggered cascade
+       ══════════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+    }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+    .reveal .bookend-mark,
+    .reveal .doc__title,
+    .reveal .bookend-ornament,
+    .reveal .doc__lede,
+    .reveal .doc__body > *,
+    .reveal .doc__meta,
+    .reveal .printers-mark {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+    }
+    .reveal.is-visible .bookend-mark,
+    .reveal.is-visible .doc__title,
+    .reveal.is-visible .bookend-ornament,
+    .reveal.is-visible .doc__lede,
+    .reveal.is-visible .doc__body > *,
+    .reveal.is-visible .doc__meta,
+    .reveal.is-visible .printers-mark {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal.is-visible .bookend-mark              { transition-delay: 0ms; }
+    .reveal.is-visible .doc__title                { transition-delay: 140ms; }
+    .reveal.is-visible .bookend-ornament          { transition-delay: 760ms; transition-duration: 900ms; }
+    .reveal.is-visible .doc__lede                 { transition-delay: 380ms; }
+    .reveal.is-visible .doc__body > *:nth-child(1) { transition-delay: 520ms; }
+    .reveal.is-visible .doc__body > *:nth-child(2) { transition-delay: 600ms; }
+    .reveal.is-visible .doc__body > *:nth-child(3) { transition-delay: 680ms; }
+    .reveal.is-visible .doc__body > *:nth-child(4) { transition-delay: 760ms; }
+    .reveal.is-visible .doc__meta                 { transition-delay: 880ms; }
+    .reveal.is-visible .printers-mark             { transition-delay: 1000ms; }
+
+    /* ── View Transitions (theme + language cross-fade) ── */
+    @supports (view-transition-name: root) {
+      ::view-transition-old(root),
+      ::view-transition-new(root) {
+        animation-duration: 360ms;
+        animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      ::view-transition-old(root) { animation-name: vt-fade-out; }
+      ::view-transition-new(root) { animation-name: vt-fade-in; }
+      @keyframes vt-fade-out { to { opacity: 0; } }
+      @keyframes vt-fade-in  { from { opacity: 0; } }
+
+      html.theme-transition::view-transition-old(root) {
+        animation: none;
+        z-index: 1;
+      }
+      html.theme-transition::view-transition-new(root) {
+        animation: theme-circular-reveal 720ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        z-index: 2;
+      }
+      @keyframes theme-circular-reveal {
+        from { clip-path: circle(0 at var(--theme-origin-x, 50%) var(--theme-origin-y, 50%)); }
+        to   { clip-path: circle(var(--theme-origin-r, 150%) at var(--theme-origin-x, 50%) var(--theme-origin-y, 50%)); }
+      }
+    }
+
+    @media (max-width: 560px) {
+      header.site-header { padding: 18px 18px 0; }
+      .doc__lede { font-size: 1.05rem; }
+      .doc__body p, .doc__list li { font-size: 0.97rem; }
+      main { padding: 56px 20px 64px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+        transition-delay: 0ms !important;
+      }
+      .reveal,
+      .reveal .bookend-mark, .reveal .doc__title,
+      .reveal .bookend-ornament, .reveal .doc__lede,
+      .reveal .doc__body > *, .reveal .doc__meta,
+      .reveal .printers-mark {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      .doc__title { letter-spacing: 0.015em !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="reading-progress" aria-hidden="true"><div class="reading-progress__fill" id="readingProgressFill"></div></div>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="HYSN.NET home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="var(--bg, #F8F4EC)"/>
+        <path d="M20 14 C19 24,19 39,20 50 M44 14 C43 24,43 39,44 50 M20 31 C26 29,32 29,44 31" fill="none" stroke="var(--accent, #1B3A5C)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>HYSN.NET</span>
+    </a>
+    <div class="header-controls">
+      <div class="lang-switch" role="group" aria-label="Language switcher">
+        <button class="lang-btn" type="button" data-lang="zh-Hant">繁</button>
+        <button class="lang-btn" type="button" data-lang="zh-Hans">簡</button>
+        <button class="lang-btn" type="button" data-lang="en">EN</button>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="切換深淺色">
+        <span class="theme-toggle__icon" id="themeIcon" aria-hidden="true">☼</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article class="folio reveal" aria-labelledby="privacy-title">
+      <div class="bookend-mark" aria-hidden="true">
+        <span class="bookend-year">MMXXVI</span>
+        <span class="bookend-mark-sep"></span>
+        <span class="bookend-kicker">Appendix</span>
+      </div>
+
+      <h1 id="privacy-title" class="doc__title doc__title--kinetic" data-i18n="title">隱私</h1>
+
+      <div class="bookend-ornament" aria-hidden="true">
+        <span class="fleuron">❦</span>
+      </div>
+
+      <p class="doc__lede" data-i18n="lede">
+        這是一個個人網站。以下是您造訪時實際發生的事——以及不會發生的事。
+      </p>
+
+      <div class="doc__body">
+        <p data-i18n-html="p1">
+          本站以靜態 HTML 呈現。您的瀏覽器會在本地儲存兩項偏好設定——<strong>深淺主題</strong>與<strong>語言</strong>——兩者僅存於您的裝置上，不會傳回伺服器。除此之外，本站不使用分析工具，不設其他 Cookie，不設帳號、表單或訂閱。
+        </p>
+
+        <p data-i18n="p2">
+          至於本站所載入的第三方資源，它們各有自家的隱私實踐：
+        </p>
+
+        <ul class="doc__list">
+          <li data-i18n-html="li1"><strong>Google Fonts</strong>載入字型時，會向 Google 傳送您的 IP 位址與 User Agent。</li>
+          <li data-i18n-html="li2"><strong>jsDelivr</strong>提供部分技術圖示的 CDN，可能記錄 IP 位址。</li>
+          <li data-i18n-html="li3"><strong>Spotify</strong>嵌入於「我在聽」一節，若您與之互動，Spotify 將依其自家政策放置 Cookie 並記錄行為。</li>
+        </ul>
+
+        <p data-i18n-html="p3">
+          若您希望完全規避，建議使用擋廣告或隱私工具，或略過該節。若您對本站之處理有任何疑問或要求，請來信 <a href="mailto:harrison@hysn.net">harrison@hysn.net</a>。
+        </p>
+      </div>
+
+      <p class="doc__meta" data-i18n-html="meta">
+        本頁最後更新於 MMXXVI 年四月。<br/>
+        此頁非律師起草；若本頁所述與本站實際行為有異，以實際為準。
+      </p>
+
+      <div class="printers-mark" aria-hidden="true">
+        <div class="printers-mark__device">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <rect width="64" height="64" rx="14" fill="var(--bg, #F8F4EC)"/>
+            <path d="M20 14 C19 24,19 39,20 50 M44 14 C43 24,43 39,44 50 M20 31 C26 29,32 29,44 31" fill="none" stroke="var(--accent, #1B3A5C)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="printers-mark__year">Anno MMXXVI</div>
+        <div class="printers-mark__motto">— in officina domestica</div>
+      </div>
+    </article>
+  </main>
+
+  <footer>&copy;2026 HYSN.NET</footer>
+
+  <script>
+    (function() {
+      var translations = {
+        "zh-Hant": {
+          title: "隱私",
+          lede: "這是一個個人網站。以下是您造訪時實際發生的事——以及不會發生的事。",
+          p1: "本站以靜態 HTML 呈現。您的瀏覽器會在本地儲存兩項偏好設定——<strong>深淺主題</strong>與<strong>語言</strong>——兩者僅存於您的裝置上，不會傳回伺服器。除此之外，本站不使用分析工具，不設其他 Cookie，不設帳號、表單或訂閱。",
+          p2: "至於本站所載入的第三方資源，它們各有自家的隱私實踐：",
+          li1: "<strong>Google Fonts</strong>載入字型時，會向 Google 傳送您的 IP 位址與 User Agent。",
+          li2: "<strong>jsDelivr</strong>提供部分技術圖示的 CDN，可能記錄 IP 位址。",
+          li3: "<strong>Spotify</strong>嵌入於「我在聽」一節，若您與之互動，Spotify 將依其自家政策放置 Cookie 並記錄行為。",
+          p3: "若您希望完全規避，建議使用擋廣告或隱私工具，或略過該節。若您對本站之處理有任何疑問或要求，請來信 <a href=\"mailto:harrison@hysn.net\">harrison@hysn.net</a>。",
+          meta: "本頁最後更新於 MMXXVI 年四月。<br/>此頁非律師起草；若本頁所述與本站實際行為有異，以實際為準。",
+          ui: { toggleToDark: "切換為深色模式", toggleToLight: "切換為淺色模式" }
+        },
+        "zh-Hans": {
+          title: "隐私",
+          lede: "这是一个个人网站。以下是您造访时实际发生的事——以及不会发生的事。",
+          p1: "本站以静态 HTML 呈现。您的浏览器会在本地储存两项偏好设置——<strong>深浅主题</strong>与<strong>语言</strong>——两者仅存于您的设备上，不会传回服务器。除此之外，本站不使用分析工具，不设其他 Cookie，不设账号、表单或订阅。",
+          p2: "至于本站所载入的第三方资源，它们各有自家的隐私实践：",
+          li1: "<strong>Google Fonts</strong>加载字体时，会向 Google 发送您的 IP 地址与 User Agent。",
+          li2: "<strong>jsDelivr</strong>提供部分技术图标的 CDN，可能记录 IP 地址。",
+          li3: "<strong>Spotify</strong>嵌入于「我在听」一节，若您与之互动，Spotify 将依其自家政策放置 Cookie 并记录行为。",
+          p3: "若您希望完全规避，建议使用挡广告或隐私工具，或略过该节。若您对本站之处理有任何疑问或要求，请来信 <a href=\"mailto:harrison@hysn.net\">harrison@hysn.net</a>。",
+          meta: "本页最后更新于 MMXXVI 年四月。<br/>此页非律师起草；若本页所述与本站实际行为有异，以实际为准。",
+          ui: { toggleToDark: "切换为深色模式", toggleToLight: "切换为浅色模式" }
+        },
+        en: {
+          title: "Privacy",
+          lede: "This is a personal website. Below is what actually happens when you visit—and what does not.",
+          p1: "This site is served as static HTML. Your browser stores two preferences locally—<strong>theme</strong> and <strong>language</strong>—both kept only on your device and never sent back to a server. Beyond that, the site uses no analytics, sets no other cookies, and offers no accounts, forms, or subscriptions.",
+          p2: "As for the third-party resources loaded by this site, each has its own privacy practices:",
+          li1: "<strong>Google Fonts</strong>: when loading fonts, sends your IP address and User Agent to Google.",
+          li2: "<strong>jsDelivr</strong>: serves the CDN for some technology icons and may log IP addresses.",
+          li3: "<strong>Spotify</strong>: embedded in the &ldquo;Listening&rdquo; section; if you interact with it, Spotify will set cookies and log behavior according to its own policy.",
+          p3: "If you wish to avoid them entirely, please use an ad or privacy blocker, or skip that section. For any questions or requests regarding how this site handles your visit, write to <a href=\"mailto:harrison@hysn.net\">harrison@hysn.net</a>.",
+          meta: "Last updated in April MMXXVI.<br/>This page was not drafted by a lawyer; should anything stated here diverge from the site's actual behavior, the actual behavior prevails.",
+          ui: { toggleToDark: "Switch to dark mode", toggleToLight: "Switch to light mode" }
+        }
+      };
+
+      var root = document.documentElement;
+      var toggle = document.getElementById("themeToggle");
+      var icon = document.getElementById("themeIcon");
+      var meta = document.querySelector('meta[name="theme-color"]');
+      var langButtons = Array.from(document.querySelectorAll(".lang-btn"));
+      var langSwitch = document.querySelector(".lang-switch");
+      var prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+      var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+      var storage = {
+        get: function(k) { try { return localStorage.getItem(k); } catch(e) { return null; } },
+        set: function(k, v) { try { localStorage.setItem(k, v); } catch(e) {} }
+      };
+
+      function withViewTransition(fn) {
+        if (prefersReducedMotion.matches || typeof document.startViewTransition !== "function") {
+          fn();
+          return;
+        }
+        document.startViewTransition(fn);
+      }
+
+      /* Wait for webfonts so kinetic typography doesn't FOUT mid-animation */
+      (function waitForFonts() {
+        var marked = false;
+        function mark() {
+          if (marked) return;
+          marked = true;
+          root.classList.add("fonts-loaded");
+        }
+        if (document.fonts && document.fonts.ready && typeof document.fonts.ready.then === "function") {
+          document.fonts.ready.then(mark);
+          setTimeout(mark, 1800);
+        } else {
+          setTimeout(mark, 700);
+        }
+      })();
+
+      function detectLanguage() {
+        var stored = storage.get("hysn-lang");
+        if (stored && translations[stored]) return stored;
+        var bl = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+        if (bl.indexOf("zh") === 0) {
+          if (bl.indexOf("hans") !== -1 || bl.indexOf("cn") !== -1 || bl.indexOf("sg") !== -1 || bl.indexOf("my") !== -1) return "zh-Hans";
+          return "zh-Hant";
+        }
+        return "en";
+      }
+
+      function applyLanguage(lang, persist) {
+        var sel = translations[lang] ? lang : "en";
+        root.lang = sel;
+        var t = translations[sel];
+        if (t.title) document.title = t.title + " · HYSN.NET";
+        document.querySelectorAll("[data-i18n]").forEach(function(el) {
+          var v = t[el.getAttribute("data-i18n")];
+          if (typeof v === "string") el.textContent = v;
+        });
+        document.querySelectorAll("[data-i18n-html]").forEach(function(el) {
+          var v = t[el.getAttribute("data-i18n-html")];
+          if (typeof v === "string") el.innerHTML = v;
+        });
+        var langIndex = 0;
+        langButtons.forEach(function(b, i) {
+          var on = b.dataset.lang === sel;
+          b.classList.toggle("is-active", on);
+          b.setAttribute("aria-pressed", String(on));
+          if (on) langIndex = i;
+        });
+        if (langSwitch) {
+          langSwitch.style.setProperty("--lang-index", langIndex);
+          langSwitch.classList.add("is-ready");
+        }
+        var ct = root.getAttribute("data-theme") || "light";
+        toggle.setAttribute("aria-label", ct === "dark" ? t.ui.toggleToLight : t.ui.toggleToDark);
+        if (persist) storage.set("hysn-lang", sel);
+      }
+
+      function applyTheme(theme, persist) {
+        var next = theme === "dark" ? "dark" : "light";
+        root.setAttribute("data-theme", next);
+        icon.textContent = next === "dark" ? "☾" : "☼";
+        var sel = translations[root.lang] ? root.lang : detectLanguage();
+        toggle.setAttribute("aria-label", next === "dark" ? translations[sel].ui.toggleToLight : translations[sel].ui.toggleToDark);
+        if (meta) meta.setAttribute("content", next === "dark" ? "#141110" : "#F8F4EC");
+        if (persist) storage.set("hysn-theme", next);
+      }
+
+      applyLanguage(detectLanguage(), false);
+      applyTheme(root.getAttribute("data-theme") || "light", false);
+
+      /* Theme toggle: ripple + icon swap + circular view transition */
+      toggle.addEventListener("click", function() {
+        var current = root.getAttribute("data-theme") || "light";
+        var next = current === "dark" ? "light" : "dark";
+
+        toggle.classList.remove("theme-toggle--ripple");
+        void toggle.offsetWidth;
+        toggle.classList.add("theme-toggle--ripple");
+        toggle.classList.add("theme-toggle--swapping");
+
+        var rect = toggle.getBoundingClientRect();
+        var originX = rect.left + rect.width / 2;
+        var originY = rect.top + rect.height / 2;
+        var maxR = Math.hypot(
+          Math.max(originX, window.innerWidth - originX),
+          Math.max(originY, window.innerHeight - originY)
+        );
+        root.style.setProperty("--theme-origin-x", originX + "px");
+        root.style.setProperty("--theme-origin-y", originY + "px");
+        root.style.setProperty("--theme-origin-r", maxR + "px");
+
+        var canCircular = !prefersReducedMotion.matches && typeof document.startViewTransition === "function";
+
+        function finishSwap() {
+          setTimeout(function() {
+            toggle.classList.remove("theme-toggle--swapping");
+          }, 260);
+        }
+
+        if (!canCircular) {
+          applyTheme(next, true);
+          finishSwap();
+          return;
+        }
+
+        root.classList.add("theme-transition");
+        var transition = document.startViewTransition(function() { applyTheme(next, true); });
+        transition.finished.finally(function() {
+          root.classList.remove("theme-transition");
+        });
+        finishSwap();
+      });
+
+      /* Language switch: cross-fade via view transition */
+      document.addEventListener("click", function(e) {
+        var lb = e.target.closest(".lang-btn");
+        if (lb) withViewTransition(function() { applyLanguage(lb.dataset.lang, true); });
+      });
+
+      function handleSys(e) {
+        if (!storage.get("hysn-theme")) applyTheme(e.matches ? "dark" : "light", false);
+      }
+      if (typeof prefersDark.addEventListener === "function") prefersDark.addEventListener("change", handleSys);
+      else if (typeof prefersDark.addListener === "function") prefersDark.addListener(handleSys);
+
+      /* Reveal on scroll */
+      (function setupRevealObserver() {
+        var els = document.querySelectorAll(".reveal");
+        if (prefersReducedMotion.matches || !("IntersectionObserver" in window)) {
+          els.forEach(function(el) { el.classList.add("is-visible"); });
+          return;
+        }
+        var obs = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+        els.forEach(function(el) { obs.observe(el); });
+      })();
+
+      /* Reading progress fallback */
+      (function setupReadingProgress() {
+        if (CSS && CSS.supports && CSS.supports("animation-timeline: scroll()")) return;
+        var fill = document.getElementById("readingProgressFill");
+        if (!fill) return;
+        var raf = 0;
+        function update() {
+          raf = 0;
+          var h = document.documentElement;
+          var max = (h.scrollHeight - h.clientHeight) || 1;
+          var pct = Math.min(1, Math.max(0, h.scrollTop / max));
+          fill.style.width = (pct * 100).toFixed(2) + "%";
+        }
+        window.addEventListener("scroll", function() {
+          if (!raf) raf = requestAnimationFrame(update);
+        }, { passive: true });
+        update();
+      })();
+    })();
+  </script>
+</body>
+</html>

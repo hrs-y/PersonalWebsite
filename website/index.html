@@ -1,0 +1,3030 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HYSN.NET</title>
+  <meta name="description" content="HYSN.NET — Harrison的個人網站，關於人工智能、西方哲學、古典漢語與技術實踐。" />
+  <meta name="author" content="Harrison" />
+  <meta name="theme-color" content="#F8F4EC" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="canonical" href="https://www.hysn.net/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="HYSN.NET" />
+  <meta property="og:title" content="HYSN.NET" />
+  <meta property="og:description" content="HYSN.NET — Harrison的個人網站，關於人工智能、西方哲學、古典漢語與技術實踐。" />
+  <meta property="og:url" content="https://www.hysn.net/" />
+  <meta property="og:locale" content="zh_Hant" />
+  <meta property="og:locale:alternate" content="zh_Hans" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="HYSN.NET" />
+  <meta name="twitter:description" content="HYSN.NET — Harrison的個人網站，關於人工智能、西方哲學、古典漢語與技術實踐。" />
+  <link rel="icon" type="image/svg+xml" sizes="any" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23F8F4EC'/%3E%3Cpath%20d='M20%2014C19%2024%2019%2039%2020%2050M44%2014C43%2024%2043%2039%2044%2050M20%2031C26%2029%2032%2029%2044%2031'%20fill='none'%20stroke='%231B3A5C'%20stroke-width='4.2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23F8F4EC'/%3E%3Cpath%20d='M20%2014C19%2024%2019%2039%2020%2050M44%2014C43%2024%2043%2039%2044%2050M20%2031C26%2029%2032%2029%2044%2031'%20fill='none'%20stroke='%231B3A5C'%20stroke-width='4.2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23F8F4EC'/%3E%3Cpath%20d='M20%2014C19%2024%2019%2039%2020%2050M44%2014C43%2024%2043%2039%2044%2050M20%2031C26%2029%2032%2029%2044%2031'%20fill='none'%20stroke='%231B3A5C'%20stroke-width='4.2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.hysn.net/#website",
+        "url": "https://www.hysn.net/",
+        "name": "HYSN.NET",
+        "description": "HYSN.NET — Harrison的個人網站，關於人工智能、西方哲學、古典漢語與技術實踐。",
+        "inLanguage": ["zh-Hant", "zh-Hans", "en"],
+        "publisher": { "@id": "https://www.hysn.net/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.hysn.net/#person",
+        "name": "Harrison",
+        "url": "https://www.hysn.net/",
+        "knowsAbout": ["Artificial Intelligence", "Western Philosophy", "Classical Chinese", "Software Engineering"]
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    (function () {
+      var theme = "light";
+      try {
+        var storedTheme = localStorage.getItem("hysn-theme");
+        if (storedTheme === "dark" || storedTheme === "light") {
+          theme = storedTheme;
+        } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          theme = "dark";
+        }
+      } catch (e) {
+        if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          theme = "dark";
+        }
+      }
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="//open.spotify.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600;700&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </noscript>
+
+  <style>
+    /* ══════════════════════════════════════════
+       COLOR SYSTEM — Prussian Blue + Bronze
+       ══════════════════════════════════════════ */
+    :root {
+      color-scheme: light;
+      --bg: #F8F4EC;
+      --bg-warm: #F3EEE4;
+      --bg-soft: rgba(248, 244, 236, 0.82);
+      --panel: rgba(245, 240, 230, 0.80);
+      --panel-solid: #F3EEE3;
+      --text: #1F1B16;
+      --text-secondary: #524838;
+      --muted: #766B5A;
+      --muted-light: #A39A89;
+      --line: rgba(31, 27, 22, 0.12);
+      --line-strong: rgba(31, 27, 22, 0.24);
+
+      --accent: #1B3A5C;
+      --accent-soft: rgba(27, 58, 92, 0.09);
+      --accent-hover: #264F7A;
+      --accent-ink: #0F2640;
+
+      --accent-2: #8B6F3F;
+      --accent-2-soft: rgba(139, 111, 63, 0.11);
+
+      --signal-red: #C04040;
+
+      --shadow: 0 8px 32px rgba(31, 27, 22, 0.06);
+      --shadow-md: 0 12px 40px rgba(31, 27, 22, 0.08);
+      --shadow-lg: 0 20px 56px rgba(31, 27, 22, 0.10);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --radius-xs: 6px;
+      --nav-height: 64px;
+      --max-width: 1080px;
+      --transition: 300ms cubic-bezier(.2,.8,.2,1);
+      --ease-out: cubic-bezier(.2,.8,.2,1);
+      --nav-ease: 360ms cubic-bezier(0.22, 1, 0.36, 1);
+
+      --glass-overlay: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.04) 48%, rgba(255, 255, 255, 0) 100%);
+      --glass-highlight-top: rgba(255, 255, 255, 0.55);
+      --glass-highlight-bottom: rgba(31, 27, 22, 0.05);
+      --glass-tint-soft: rgba(255, 255, 255, 0.08);
+      --serif: "Cormorant Garamond", "Noto Serif TC", "EB Garamond", Georgia, serif;
+      --body: "EB Garamond", "Noto Serif TC", "Cormorant Garamond", Georgia, serif;
+      --mono: "JetBrains Mono", ui-monospace, "SF Mono", "Menlo", "Monaco", "Consolas", monospace;
+      --ornament-color: var(--muted-light);
+    }
+
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #141110;
+      --bg-warm: #1B1816;
+      --bg-soft: rgba(20, 17, 16, 0.85);
+      --panel: rgba(27, 24, 22, 0.82);
+      --panel-solid: #201D1A;
+      --text: #EFE8DC;
+      --text-secondary: #BFB5A4;
+      --muted: #938875;
+      --muted-light: #615647;
+      --line: rgba(239, 232, 220, 0.10);
+      --line-strong: rgba(239, 232, 220, 0.22);
+
+      --accent: #8AB0D4;
+      --accent-soft: rgba(138, 176, 212, 0.14);
+      --accent-hover: #A3C2DE;
+      --accent-ink: #6B94BC;
+
+      --accent-2: #D4A866;
+      --accent-2-soft: rgba(212, 168, 102, 0.14);
+
+      --signal-red: #E06060;
+
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+      --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.28);
+      --shadow-lg: 0 20px 56px rgba(0, 0, 0, 0.36);
+      --ornament-color: var(--muted-light);
+
+      --glass-overlay: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.015) 48%, rgba(255, 255, 255, 0) 100%);
+      --glass-highlight-top: rgba(255, 255, 255, 0.10);
+      --glass-highlight-bottom: rgba(0, 0, 0, 0.22);
+      --glass-tint-soft: rgba(255, 255, 255, 0.03);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background: var(--bg);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.78;
+      letter-spacing: 0.005em;
+      overflow-x: hidden;
+      transition: background-color var(--transition), color var(--transition);
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    img { display: block; max-width: 100%; }
+
+    button {
+      font: inherit;
+      color: inherit;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ── Reading progress (top) ── */
+    .reading-progress {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      z-index: 200;
+      pointer-events: none;
+      background: transparent;
+    }
+    .reading-progress__fill {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 8px rgba(27, 58, 92, 0.25);
+      transform-origin: left center;
+      transition: width 80ms linear;
+    }
+    html[data-theme="dark"] .reading-progress__fill {
+      box-shadow: 0 0 10px rgba(138, 176, 212, 0.30);
+    }
+    @supports (animation-timeline: scroll()) {
+      .reading-progress__fill {
+        width: 100%;
+        transform: scaleX(0);
+        transition: none;
+        animation: reading-progress-grow linear forwards;
+        animation-timeline: scroll(root);
+      }
+      @keyframes reading-progress-grow {
+        to { transform: scaleX(1); }
+      }
+    }
+
+    /* ── Navigation ── */
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 100;
+      padding: 12px 16px 0;
+    }
+
+    .nav {
+      position: relative;
+      width: min(var(--max-width), calc(100% - 8px));
+      margin: 0 auto;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--glass-overlay), var(--bg-soft);
+      -webkit-backdrop-filter: blur(34px) saturate(220%);
+      backdrop-filter: blur(34px) saturate(220%);
+      box-shadow:
+        var(--shadow),
+        inset 0 1px 0 var(--glass-highlight-top),
+        inset 0 -1px 0 var(--glass-highlight-bottom);
+      transition: background var(--nav-ease), border-color var(--nav-ease), box-shadow var(--nav-ease);
+      isolation: isolate;
+      overflow: hidden;
+    }
+    /* Cursor-tracked specular highlight — "wet glass" feel on desktop */
+    .nav::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      background: radial-gradient(
+        220px circle at var(--nav-light-x, 50%) var(--nav-light-y, -30%),
+        rgba(255, 255, 255, 0.55) 0%,
+        rgba(255, 255, 255, 0.16) 28%,
+        transparent 64%
+      );
+      mix-blend-mode: overlay;
+      opacity: 0;
+      transition: opacity 480ms cubic-bezier(0.22, 1, 0.36, 1);
+      pointer-events: none;
+      z-index: 0;
+    }
+    html[data-theme="dark"] .nav::before {
+      background: radial-gradient(
+        260px circle at var(--nav-light-x, 50%) var(--nav-light-y, -30%),
+        rgba(212, 230, 255, 0.30) 0%,
+        rgba(212, 230, 255, 0.08) 32%,
+        transparent 70%
+      );
+      mix-blend-mode: screen;
+    }
+    .nav.is-tracking::before { opacity: 1; }
+    .nav > * { position: relative; z-index: 1; }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      transition: color var(--nav-ease);
+    }
+    .brand:hover { color: var(--accent); }
+
+    .brand-mark {
+      display: inline-grid;
+      place-items: center;
+      width: 28px; height: 28px;
+      flex-shrink: 0;
+      transition: transform var(--nav-ease);
+    }
+    .brand:hover .brand-mark { transform: scale(1.06); }
+    .brand-mark svg { width: 28px; height: 28px; display: block; }
+
+    .brand-text {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+    }
+
+    .nav-toggle {
+      display: none;
+      margin-left: auto;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: var(--bg-soft);
+      align-items: center;
+      justify-content: center;
+      transition: border-color var(--nav-ease), background var(--nav-ease), box-shadow var(--nav-ease);
+    }
+    .nav-toggle:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      box-shadow: 0 6px 16px rgba(31, 27, 22, 0.08);
+    }
+    html[data-theme="dark"] .nav-toggle:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+    }
+
+    .nav-toggle__bars,
+    .nav-toggle__bars::before,
+    .nav-toggle__bars::after {
+      content: "";
+      display: block;
+      width: 16px; height: 1.5px;
+      border-radius: 999px;
+      background: currentColor;
+      transition: transform var(--nav-ease), opacity var(--nav-ease);
+    }
+    .nav-toggle__bars { position: relative; }
+    .nav-toggle__bars::before { position: absolute; top: -5px; left: 0; }
+    .nav-toggle__bars::after { position: absolute; top: 5px; left: 0; }
+    .nav.is-open .nav-toggle__bars { transform: rotate(45deg); }
+    .nav.is-open .nav-toggle__bars::before { transform: translateY(5px) rotate(90deg); }
+    .nav.is-open .nav-toggle__bars::after { opacity: 0; }
+
+    .nav-panel {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding-left: 18px;
+      border-left: 1px solid var(--line);
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 2px; }
+
+    .nav-link {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: 0.92rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      transition: color var(--nav-ease), background var(--nav-ease), border-color var(--nav-ease);
+      white-space: nowrap;
+      border: 1px solid transparent;
+    }
+    .nav-link:hover,
+    .nav-link:focus-visible,
+    .nav-link[aria-current="true"] {
+      color: var(--text);
+      background: var(--accent-soft);
+      border-color: var(--line);
+      outline: none;
+    }
+
+    /* Icon + text spans — icon hidden by default (mobile), text shown inline */
+    .nav-link__icon { display: none; }
+    .nav-link__text { display: inline; }
+
+    .controls {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      padding: 3px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: transparent;
+      transition: border-color var(--nav-ease);
+    }
+    .lang-switch:hover { border-color: var(--line-strong); }
+
+    .lang-btn {
+      min-width: 38px;
+      height: 32px;
+      padding: 0 10px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      transition: background var(--nav-ease), color var(--nav-ease), border-color var(--nav-ease);
+    }
+    .lang-btn:hover { color: var(--text); }
+    .lang-btn.is-active {
+      background: var(--accent-soft);
+      color: var(--text);
+    }
+
+    .theme-toggle {
+      display: inline-grid;
+      place-items: center;
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      transition: border-color var(--nav-ease), color var(--nav-ease), background var(--nav-ease), box-shadow var(--nav-ease);
+    }
+    .theme-toggle:hover { border-color: var(--line-strong); }
+    .theme-toggle__icon { font-size: 0.92rem; line-height: 1; }
+
+    /* ── Main / Sections ── */
+    main { padding-top: calc(var(--nav-height) + 24px); }
+    section { scroll-margin-top: 100px; }
+
+    /* ══════════════════════════════════════════
+       BOOKEND FRAME — Used by Hero + Epilogue
+       ══════════════════════════════════════════ */
+    .bookend-frame {
+      position: relative;
+      width: min(820px, 100%);
+      margin: 0 auto;
+      padding: clamp(28px, 4.5vw, 56px) clamp(8px, 3vw, 32px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(28px, 4vw, 48px);
+      z-index: 1;
+    }
+
+    .bookend-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: 0.82rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+    }
+    .bookend-year {
+      color: var(--accent-2);
+      font-weight: 600;
+      letter-spacing: 0.32em;
+    }
+    .bookend-mark-sep {
+      width: 28px;
+      height: 1px;
+      background: var(--line-strong);
+    }
+    .bookend-kicker { color: var(--muted); }
+
+    .bookend-body {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .bookend-title {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 5.5vw, 4.6rem);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.08;
+      letter-spacing: 0.015em;
+      color: var(--text);
+      text-wrap: balance;
+    }
+    .bookend-title .als {
+      font-style: normal;
+      font-size: 0.6em;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: lowercase;
+      padding: 0 0.15em;
+      vertical-align: 0.15em;
+      font-weight: 500;
+    }
+
+    .bookend-ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      color: var(--accent);
+    }
+    .bookend-ornament::before,
+    .bookend-ornament::after {
+      content: "";
+      width: 72px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+    .bookend-ornament .fleuron { font-size: 1.15rem; line-height: 1; }
+
+    .bookend-attribution {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(0.86rem, 1vw + 0.5rem, 1rem);
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
+    .bookend-dash { color: var(--accent-2); margin-right: 12px; letter-spacing: 0; }
+    .bookend-author { color: var(--text-secondary); font-weight: 500; }
+    .bookend-source {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-style: italic;
+      letter-spacing: 0.12em;
+      text-transform: none;
+    }
+
+    /* ══════════════════════════════════════════
+       HERO — uses bookend-frame + pillars
+       ══════════════════════════════════════════ */
+    .hero {
+      position: relative;
+      min-height: calc(100svh - 20px);
+      display: grid;
+      place-items: center;
+      padding: 100px 20px 60px;
+      overflow: clip;
+    }
+    .hero .bookend-frame { z-index: 2; }
+
+    /* ── Hero / Epilogue bookend entrance — gated by fonts-loaded ── */
+    .hero .bookend-mark,
+    .hero .bookend-ornament,
+    .hero .bookend-attribution,
+    .hero-actions {
+      opacity: 0;
+      transform: translateY(10px);
+      transition:
+        opacity 800ms var(--ease-out),
+        transform 800ms var(--ease-out);
+    }
+    .fonts-loaded .hero .bookend-mark,
+    .fonts-loaded .hero .bookend-ornament,
+    .fonts-loaded .hero .bookend-attribution,
+    .fonts-loaded .hero-actions {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fonts-loaded .hero .bookend-mark        { transition-delay: 200ms; }
+    .fonts-loaded .hero .bookend-ornament    { transition-delay: 1280ms; transition-duration: 900ms; }
+    .fonts-loaded .hero .bookend-attribution { transition-delay: 1480ms; }
+    .fonts-loaded .hero-actions              { transition-delay: 1640ms; }
+
+    /* ── Kinetic title (used in Hero + Epilogue) ── */
+    .bookend-title--kinetic {
+      letter-spacing: 0.06em;
+      transition: letter-spacing 1600ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .fonts-loaded .hero .bookend-title--kinetic,
+    .fonts-loaded .reveal.is-visible .panel--epilogue .bookend-title--kinetic {
+      letter-spacing: 0.015em;
+      transition-delay: 700ms;
+    }
+
+    .hero-word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(22px);
+      filter: blur(8px);
+      transition:
+        opacity 1100ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 1100ms cubic-bezier(0.22, 1, 0.36, 1),
+        filter 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .fonts-loaded .hero .hero-word,
+    .fonts-loaded .reveal.is-visible .panel--epilogue .hero-word {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+    .fonts-loaded .hero .hero-word:nth-child(1),
+    .fonts-loaded .reveal.is-visible .panel--epilogue .hero-word:nth-child(1) { transition-delay: 380ms; }
+    .fonts-loaded .hero .hero-word:nth-child(2),
+    .fonts-loaded .reveal.is-visible .panel--epilogue .hero-word:nth-child(2) { transition-delay: 580ms; }
+    .fonts-loaded .hero .hero-word:nth-child(3),
+    .fonts-loaded .reveal.is-visible .panel--epilogue .hero-word:nth-child(3) { transition-delay: 780ms; }
+
+    /* Fleuron — settle rotation in both bookends */
+    .hero .bookend-ornament .fleuron,
+    .panel--epilogue .bookend-ornament .fleuron {
+      display: inline-block;
+      opacity: 0;
+      transform: rotate(-14deg) scale(0.7);
+      transition:
+        opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .fonts-loaded .hero .bookend-ornament .fleuron,
+    .fonts-loaded .reveal.is-visible .panel--epilogue .bookend-ornament .fleuron {
+      opacity: 1;
+      transform: rotate(0) scale(1);
+      transition-delay: 1320ms;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 26px;
+      border-radius: 3px;
+      border: 1px solid transparent;
+      font-family: var(--serif);
+      font-size: 0.86rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      transition: transform 300ms var(--ease-out), box-shadow var(--transition), border-color var(--transition), background var(--transition), color var(--transition);
+    }
+    .button:hover { transform: translateY(-2px); }
+
+    .button.primary {
+      color: #F4EED8;
+      background: var(--accent);
+      border-color: var(--accent);
+      box-shadow: 0 6px 20px rgba(27, 58, 92, 0.22);
+    }
+    .button.primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+      box-shadow: 0 10px 28px rgba(27, 58, 92, 0.28);
+    }
+    html[data-theme="dark"] .button.primary {
+      color: #141110;
+      box-shadow: 0 6px 20px rgba(138, 176, 212, 0.22);
+    }
+    html[data-theme="dark"] .button.primary:hover {
+      box-shadow: 0 10px 28px rgba(138, 176, 212, 0.28);
+    }
+
+    .button.secondary {
+      color: var(--text);
+      border-color: var(--line-strong);
+      background: transparent;
+    }
+    .button.secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    /* ══════════════════════════════════════════
+       CONTAINER / PANEL
+       ══════════════════════════════════════════ */
+    .container {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section { padding: 20px 0; }
+
+    .panel {
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+      padding: clamp(32px, 3.5vw, 52px);
+      overflow: hidden;
+      transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .section-watermark {
+      position: absolute;
+      top: clamp(14px, 2.2vw, 28px);
+      right: clamp(18px, 2.6vw, 40px);
+      font-family: var(--serif);
+      font-size: clamp(5.5rem, 13vw, 10rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--accent);
+      opacity: 0;
+      line-height: 0.85;
+      pointer-events: none;
+      user-select: none;
+      letter-spacing: 0;
+      z-index: 0;
+      clip-path: inset(0 100% 0 0);
+      transform: translateY(-12px) scale(0.92);
+      transition:
+        opacity 1100ms cubic-bezier(0.22, 1, 0.36, 1) 200ms,
+        clip-path 1400ms cubic-bezier(0.22, 1, 0.36, 1) 300ms,
+        transform 1100ms cubic-bezier(0.22, 1, 0.36, 1) 300ms;
+    }
+    .reveal.is-visible .section-watermark,
+    .hero .section-watermark {
+      opacity: 0.075;
+      clip-path: inset(0 0 0 0);
+      transform: translateY(0) scale(1);
+    }
+    html[data-theme="dark"] .reveal.is-visible .section-watermark,
+    html[data-theme="dark"] .hero .section-watermark { opacity: 0.12; }
+
+    .section-head {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: 0.02em;
+    }
+
+    .section-title-row {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .section-note {
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.5;
+      font-style: italic;
+    }
+    .section-note:empty { display: none; }
+
+    .section-head-divider {
+      position: relative;
+      z-index: 1;
+      width: 48px;
+      height: 1px;
+      margin: 14px 0 32px;
+      background: var(--accent-2);
+      opacity: 0.6;
+    }
+
+    /* ══════════════════════════════════════════
+       ABOUT (I) — Classical Essay Page
+       ══════════════════════════════════════════ */
+    .about-prose {
+      position: relative;
+      z-index: 1;
+      max-width: 740px;
+      margin: 0 auto;
+      color: var(--text-secondary);
+      font-size: clamp(1rem, 0.8vw + 0.85rem, 1.1rem);
+      line-height: 1.92;
+      text-wrap: pretty;
+    }
+    .about-prose p { margin: 0; text-indent: 2em; }
+    .about-prose p + p { margin-top: 1.1em; }
+
+    .about-prose p:first-child { text-indent: 0; }
+    .about-prose p:first-child::first-letter {
+      font-family: var(--serif);
+      float: left;
+      font-size: 3.6em;
+      line-height: 0.92;
+      font-weight: 500;
+      font-style: italic;
+      color: var(--accent);
+      padding: 0.05em 0.14em 0 0;
+      margin: 0.06em 0.06em 0 0;
+      border-right: 1px solid var(--accent-2-soft);
+      shape-outside: margin-box;
+    }
+    html[data-theme="dark"] .about-prose p:first-child::first-letter {
+      border-right-color: rgba(212, 168, 102, 0.18);
+    }
+
+    /* ══════════════════════════════════════════
+       INSTRUMENTS (II) — Lab Notebook / Blueprint
+       ══════════════════════════════════════════ */
+    .panel--lab {
+      background:
+        linear-gradient(rgba(27, 58, 92, 0.055) 1px, transparent 1px) 0 0 / 28px 28px,
+        linear-gradient(90deg, rgba(27, 58, 92, 0.055) 1px, transparent 1px) 0 0 / 28px 28px,
+        var(--panel-solid);
+    }
+    html[data-theme="dark"] .panel--lab {
+      background:
+        linear-gradient(rgba(138, 176, 212, 0.055) 1px, transparent 1px) 0 0 / 28px 28px,
+        linear-gradient(90deg, rgba(138, 176, 212, 0.055) 1px, transparent 1px) 0 0 / 28px 28px,
+        var(--panel-solid);
+    }
+
+    .stack-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .tech-card {
+      position: relative;
+      padding: 28px 24px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--panel-solid);
+      transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+    }
+    .tech-card:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .tech-card::before,
+    .tech-card::after {
+      content: "";
+      position: absolute;
+      width: 14px; height: 14px;
+      border: 1px solid var(--accent);
+      opacity: 0.28;
+      transition: opacity var(--transition), width var(--transition), height var(--transition);
+      pointer-events: none;
+    }
+    .tech-card::before {
+      top: 10px; left: 10px;
+      border-right: 0; border-bottom: 0;
+    }
+    .tech-card::after {
+      bottom: 10px; right: 10px;
+      border-left: 0; border-top: 0;
+    }
+    .tech-card:hover::before,
+    .tech-card:hover::after {
+      opacity: 0.75;
+      width: 18px; height: 18px;
+    }
+
+    .tech-icon {
+      width: 60px; height: 60px;
+      margin-bottom: 20px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--line);
+      background: var(--accent-soft);
+      display: grid;
+      place-items: center;
+    }
+    .tech-icon svg { width: 34px; height: 34px; display: block; }
+
+    .icon-image { width: 34px; height: 34px; object-fit: contain; }
+
+    .icon-fallback {
+      display: none;
+      width: 34px; height: 34px;
+      align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .icon-fallback.is-visible { display: inline-flex; }
+
+    .tech-name {
+      margin: 0 0 4px;
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    .tech-role {
+      margin: 0 0 14px;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+
+    .tech-desc {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* ══════════════════════════════════════════
+       PROJECTS (III) — Interactive Archive
+       ══════════════════════════════════════════ */
+
+    /* Grid */
+    .projects-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    /* Card — engraved catalogue plate */
+    .project-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 0;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(140% 70% at 50% 0%, rgba(27, 58, 92, 0.05) 0%, transparent 55%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, transparent 30%),
+        var(--panel-solid);
+      overflow: hidden;
+      isolation: isolate;
+      will-change: transform;
+      transition:
+        opacity 600ms var(--ease-out),
+        transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 400ms var(--ease-out),
+        box-shadow 400ms var(--ease-out);
+    }
+    html[data-theme="dark"] .project-card {
+      background:
+        radial-gradient(140% 70% at 50% 0%, rgba(138, 176, 212, 0.05) 0%, transparent 55%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, transparent 30%),
+        var(--panel-solid);
+    }
+
+    /* Bronze corner brackets — fade in on hover */
+    .project-card::before,
+    .project-card::after {
+      content: "";
+      position: absolute;
+      width: 14px; height: 14px;
+      border: 1px solid var(--accent-2);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 2;
+      transition:
+        opacity 500ms var(--ease-out),
+        width 500ms var(--ease-out),
+        height 500ms var(--ease-out);
+    }
+    .project-card::before {
+      top: 10px; left: 10px;
+      border-right: 0; border-bottom: 0;
+    }
+    .project-card::after {
+      bottom: 10px; right: 10px;
+      border-left: 0; border-top: 0;
+    }
+
+    .project-card:hover {
+      border-color: var(--accent);
+      box-shadow:
+        var(--shadow-md),
+        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+      transform: translateY(-5px);
+    }
+    html[data-theme="dark"] .project-card:hover {
+      box-shadow:
+        var(--shadow-md),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+    .project-card:hover::before,
+    .project-card:hover::after {
+      opacity: 0.65;
+      width: 22px; height: 22px;
+    }
+
+    .project-card.is-filtered-out {
+      opacity: 0;
+      transform: scale(0.92);
+      pointer-events: none;
+    }
+
+    /* Card header ribbon — engraved nameplate */
+    .project-card__head {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 18px;
+      border-bottom: 1px dashed var(--line);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 100%),
+        var(--bg-warm);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.20);
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    html[data-theme="dark"] .project-card__head {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%),
+        rgba(255, 255, 255, 0.025);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+
+    .project-number {
+      margin: 0;
+      color: var(--accent-2);
+      font-weight: 600;
+      transition: letter-spacing 500ms var(--ease-out);
+    }
+    .project-card:hover .project-number {
+      letter-spacing: 0.22em;
+    }
+
+    .project-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 3px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.20),
+        inset 0 -1px 0 rgba(31, 27, 22, 0.04);
+    }
+    html[data-theme="dark"] .project-status {
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.18);
+    }
+    .project-status::before {
+      content: "";
+      width: 6px; height: 6px;
+      border-radius: 50%;
+    }
+    .project-status--published {
+      background: linear-gradient(180deg, var(--accent-soft), rgba(27, 58, 92, 0.04));
+      color: var(--accent);
+    }
+    .project-status--published::before {
+      background: var(--accent);
+      box-shadow: 0 0 6px rgba(27, 58, 92, 0.4);
+    }
+    html[data-theme="dark"] .project-status--published::before {
+      box-shadow: 0 0 6px rgba(138, 176, 212, 0.5);
+    }
+
+    .project-status--progress {
+      background: linear-gradient(180deg, var(--accent-2-soft), rgba(139, 111, 63, 0.05));
+      color: var(--accent-2);
+    }
+    .project-status--progress::before {
+      background: var(--accent-2);
+      animation: pulse-glow 2.4s ease-in-out infinite;
+    }
+
+    .project-status--planning {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--line-strong);
+      padding: 3px 9px;
+      box-shadow: none;
+    }
+    .project-status--planning::before { background: var(--muted-light); }
+
+    @keyframes pulse-glow {
+      0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(139, 111, 63, 0.5);
+      }
+      50% {
+        opacity: 0.55;
+        box-shadow: 0 0 0 4px rgba(139, 111, 63, 0);
+      }
+    }
+
+    /* Card body */
+    .project-card__body {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 20px 22px 22px;
+      flex: 1;
+    }
+
+    .project-title {
+      position: relative;
+      margin: 0;
+      padding-bottom: 8px;
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 500;
+      letter-spacing: 0.015em;
+      color: var(--text);
+      line-height: 1.15;
+      transition: color 400ms var(--ease-out);
+    }
+    .project-title::after {
+      content: "";
+      position: absolute;
+      left: 0; bottom: 0;
+      width: 28px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent-2) 0%, transparent 100%);
+      transform-origin: left;
+      transform: scaleX(0.6);
+      opacity: 0.55;
+      transition:
+        width 600ms var(--ease-out),
+        transform 600ms var(--ease-out),
+        opacity 600ms var(--ease-out);
+    }
+    .project-card:hover .project-title {
+      color: var(--accent);
+    }
+    .project-card:hover .project-title::after {
+      width: 64px;
+      transform: scaleX(1);
+      opacity: 1;
+    }
+    .project-title--light {
+      color: var(--muted);
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .project-desc {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    /* Metadata list — spec sheet style */
+    .project-meta-list {
+      margin: 0;
+      padding: 10px 0 0;
+      border-top: 1px dashed var(--line);
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .project-meta-row {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .project-meta-row dt {
+      flex-shrink: 0;
+      width: 70px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .project-meta-row dd {
+      margin: 0;
+      color: var(--text-secondary);
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .project-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 3px;
+      border: 1px solid var(--line);
+      background: transparent;
+      font-size: 0.64rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      font-weight: 500;
+      transition: border-color 400ms var(--ease-out), color 400ms var(--ease-out), background 400ms var(--ease-out);
+    }
+    .project-card:hover .project-tag {
+      border-color: var(--accent-2);
+      color: var(--text-secondary);
+      background: var(--accent-2-soft);
+    }
+
+    /* Progress bar — animated fill with shimmer */
+    .project-progress {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-top: 10px;
+      font-family: var(--mono);
+      font-size: 0.64rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .project-progress__bar {
+      flex: 1;
+      height: 4px;
+      border-radius: 2px;
+      background: var(--line);
+      overflow: hidden;
+      position: relative;
+      box-shadow: inset 0 1px 1px rgba(31, 27, 22, 0.06);
+    }
+    html[data-theme="dark"] .project-progress__bar {
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.30);
+    }
+    .project-progress__fill {
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      border-radius: 2px;
+      box-shadow: 0 0 8px rgba(139, 111, 63, 0.4);
+      transition: width 1800ms cubic-bezier(.2,.8,.2,1) 500ms;
+    }
+    html[data-theme="dark"] .project-progress__fill {
+      box-shadow: 0 0 8px rgba(212, 168, 102, 0.4);
+    }
+    .project-progress__fill::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 40%; height: 100%;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.55) 50%,
+        transparent 100%);
+      animation: progress-shimmer 2.6s ease-in-out infinite;
+    }
+    html[data-theme="dark"] .project-progress__fill::after {
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.25) 50%,
+        transparent 100%);
+    }
+    @keyframes progress-shimmer {
+      0% { transform: translateX(-100%); }
+      60%, 100% { transform: translateX(300%); }
+    }
+    .reveal.is-visible .project-card .project-progress__fill {
+      width: var(--progress, 0%);
+    }
+    .project-progress__value {
+      font-weight: 600;
+      color: var(--text-secondary);
+      min-width: 32px;
+      text-align: right;
+    }
+
+    /* Link */
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 6px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+      color: var(--accent);
+      font-family: var(--serif);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      transition: color 400ms var(--ease-out), gap 400ms var(--ease-out), border-top-color 400ms var(--ease-out);
+    }
+    .project-link:hover {
+      color: var(--accent-hover);
+      gap: 14px;
+      border-top-color: var(--accent-2);
+    }
+    .project-link .arrow {
+      display: inline-block;
+      transition: transform 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .project-link:hover .arrow { transform: translate(3px, -3px) rotate(-12deg); }
+
+    /* ══════════════════════════════════════════
+       LISTENING (IV) — Warm Radio Booth
+       ══════════════════════════════════════════ */
+    .panel--warm {
+      background:
+        radial-gradient(ellipse at top left, rgba(212, 168, 102, 0.07), transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(139, 111, 63, 0.05), transparent 55%),
+        var(--panel);
+    }
+    html[data-theme="dark"] .panel--warm {
+      background:
+        radial-gradient(ellipse at top left, rgba(212, 168, 102, 0.10), transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(212, 168, 102, 0.06), transparent 55%),
+        var(--panel);
+    }
+
+    .listening-wrap {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 14px;
+    }
+    .spotify-embed {
+      width: 100%;
+      border: 0;
+      border-radius: 12px;
+      display: block;
+    }
+
+    /* ══════════════════════════════════════════
+       EPILOGUE (V) — Philosophical Bookend
+       ══════════════════════════════════════════ */
+    .panel--epilogue {
+      padding: clamp(20px, 2.5vw, 36px);
+    }
+    .panel--epilogue .section-watermark {
+      top: clamp(10px, 1.5vw, 18px);
+      right: clamp(14px, 2vw, 28px);
+    }
+
+    .epilogue-invitation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      margin-top: 8px;
+      text-align: center;
+    }
+    .epilogue-text {
+      max-width: 520px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.75;
+      text-wrap: balance;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 32px;
+      border-radius: 3px;
+      border: 1px solid var(--line-strong);
+      background: transparent;
+      font-family: var(--serif);
+      font-size: clamp(0.95rem, 1.2vw + 0.7rem, 1.1rem);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      transition: transform var(--transition), border-color var(--transition), background var(--transition), box-shadow var(--transition), color var(--transition);
+    }
+    .contact-link::before {
+      content: "✉";
+      color: var(--accent);
+      font-size: 0.95rem;
+    }
+    .contact-link:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-soft);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* ══════════════════════════════════════════
+       FOOTER — Justified Colophon Strip
+       Horizontal: copy │ brand │ imprint  ── then legal
+       ══════════════════════════════════════════ */
+    /* ══════════════════════════════════════════
+       FOOTER — Three-zone colophon strip
+       Brand · Ornament · Imprint, each balanced
+       ══════════════════════════════════════════ */
+    .site-footer {
+      padding: 56px 20px 48px;
+      position: relative;
+    }
+    .footer-inner {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+      color: var(--muted);
+    }
+
+    /* Three balanced zones, each a vertical stack of comparable mass */
+    .footer-strip {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      column-gap: clamp(28px, 6vw, 72px);
+      padding: 28px clamp(20px, 5vw, 64px);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    /* Zone 1 — Brand colophon (left) */
+    .footer-brand {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      justify-self: start;
+    }
+    .footer-brand-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .footer-brand-mark {
+      display: inline-grid;
+      place-items: center;
+      width: 28px; height: 28px;
+      opacity: 0.92;
+      transition: transform var(--transition);
+      flex-shrink: 0;
+    }
+    .footer-brand-mark svg { width: 28px; height: 28px; display: block; }
+    .footer-brand:hover .footer-brand-mark { transform: scale(1.06); }
+    .footer-brand-text {
+      font-family: var(--serif);
+      font-size: 1.02rem;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      padding-left: 0.28em;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+    .footer-brand-est {
+      font-family: var(--serif);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.4em;
+      padding-left: 0.4em;
+      color: var(--accent-2);
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    /* Zone 2 — Ornament centerpiece (center) */
+    .footer-ornament {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      justify-self: center;
+      color: var(--accent-2);
+    }
+    .footer-ornament__fleuron {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      line-height: 1;
+      opacity: 0.78;
+    }
+    .footer-ornament__year {
+      font-family: var(--serif);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.42em;
+      padding-left: 0.42em;
+      opacity: 0.78;
+    }
+
+    /* Zone 3 — Imprint nav (right) */
+    .footer-imprint {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+      justify-self: end;
+      font-family: var(--serif);
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+    }
+    .footer-imprint-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .footer-imprint a {
+      color: var(--text-secondary);
+      border-bottom: 1px solid transparent;
+      padding-bottom: 1px;
+      transition: color 220ms ease, border-color 220ms ease;
+      white-space: nowrap;
+    }
+    .footer-imprint a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .footer-imprint__sep {
+      color: var(--muted-light);
+      opacity: 0.5;
+      letter-spacing: 0;
+    }
+    .footer-imprint__source {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+    .footer-imprint__source svg {
+      width: 13px;
+      height: 13px;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    /* Legal — italic fine print, centered under the strip */
+    .footer-legal {
+      max-width: 640px;
+      margin: 22px auto 0;
+      text-align: center;
+      font-size: 0.72rem;
+      font-style: italic;
+      line-height: 1.85;
+      color: var(--muted-light);
+      text-wrap: pretty;
+    }
+
+    /* Copyright — terminal stamp */
+    .footer-copy {
+      margin: 14px auto 0;
+      text-align: center;
+      font-family: var(--serif);
+      font-size: 0.74rem;
+      letter-spacing: 0.28em;
+      padding-left: 0.28em;
+      color: var(--muted-light);
+    }
+
+    @media (max-width: 860px) {
+      .footer-strip {
+        grid-template-columns: 1fr;
+        row-gap: 22px;
+        justify-items: center;
+        padding: 26px 20px;
+      }
+      .footer-brand,
+      .footer-imprint { justify-self: center; align-items: center; }
+    }
+    @media (max-width: 760px) {
+      .site-footer { padding: 44px 20px 40px; }
+      .footer-imprint { font-size: 0.88rem; }
+      .footer-brand-text { font-size: 1rem; }
+      .footer-legal { font-size: 0.7rem; }
+    }
+
+    /* ══════════════════════════════════════════
+       REVEAL ANIMATIONS
+       ══════════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+    }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+    .reveal .section-head,
+    .reveal .section-head-divider,
+    .reveal .about-prose p,
+    .reveal .tech-card,
+    .reveal .project-card,
+    .reveal .spotify-embed,
+    .reveal .bookend-frame > *,
+    .reveal .epilogue-invitation {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 600ms var(--ease-out), transform 600ms var(--ease-out);
+    }
+    .reveal.is-visible .section-head,
+    .reveal.is-visible .section-head-divider,
+    .reveal.is-visible .about-prose p,
+    .reveal.is-visible .tech-card,
+    .reveal.is-visible .project-card,
+    .reveal.is-visible .spotify-embed,
+    .reveal.is-visible .bookend-frame > *,
+    .reveal.is-visible .epilogue-invitation {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal.is-visible .section-head           { transition-delay: 0ms; }
+    .reveal.is-visible .section-head-divider   { transition-delay: 60ms; }
+    .reveal.is-visible .about-prose p:nth-child(1) { transition-delay: 120ms; }
+    .reveal.is-visible .about-prose p:nth-child(2) { transition-delay: 180ms; }
+    .reveal.is-visible .about-prose p:nth-child(3) { transition-delay: 240ms; }
+    .reveal.is-visible .about-prose p:nth-child(4) { transition-delay: 300ms; }
+    .reveal.is-visible .tech-card:nth-child(1)     { transition-delay: 140ms; }
+    .reveal.is-visible .tech-card:nth-child(2)     { transition-delay: 260ms; }
+    .reveal.is-visible .tech-card:nth-child(3)     { transition-delay: 380ms; }
+    .reveal.is-visible .project-card:nth-child(1)  { transition-delay: 160ms; --stagger: 160ms; }
+    .reveal.is-visible .project-card:nth-child(2)  { transition-delay: 280ms; --stagger: 280ms; }
+
+    /* Inner cascade — each card's contents fade-up after the card itself */
+    .reveal .project-card__head,
+    .reveal .project-card__body > * {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 600ms var(--ease-out), transform 600ms var(--ease-out);
+    }
+    .reveal.is-visible .project-card__head,
+    .reveal.is-visible .project-card__body > * {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal.is-visible .project-card__head                  { transition-delay: calc(var(--stagger, 0ms) + 200ms); }
+    .reveal.is-visible .project-card__body > *:nth-child(1) { transition-delay: calc(var(--stagger, 0ms) + 280ms); }
+    .reveal.is-visible .project-card__body > *:nth-child(2) { transition-delay: calc(var(--stagger, 0ms) + 340ms); }
+    .reveal.is-visible .project-card__body > *:nth-child(3) { transition-delay: calc(var(--stagger, 0ms) + 400ms); }
+    .reveal.is-visible .project-card__body > *:nth-child(4) { transition-delay: calc(var(--stagger, 0ms) + 460ms); }
+    .reveal.is-visible .project-card__body > *:nth-child(5) { transition-delay: calc(var(--stagger, 0ms) + 520ms); }
+    .reveal.is-visible .spotify-embed:nth-child(1) { transition-delay: 100ms; }
+    .reveal.is-visible .spotify-embed:nth-child(2) { transition-delay: 170ms; }
+    .reveal.is-visible .spotify-embed:nth-child(3) { transition-delay: 240ms; }
+    .reveal.is-visible .bookend-frame > *:nth-child(1) { transition-delay: 120ms; }
+    .reveal.is-visible .bookend-frame > *:nth-child(2) { transition-delay: 220ms; }
+    .reveal.is-visible .bookend-frame > *:nth-child(3) { transition-delay: 320ms; }
+    .reveal.is-visible .bookend-frame > *:nth-child(4) { transition-delay: 420ms; }
+    .reveal.is-visible .epilogue-invitation        { transition-delay: 500ms; }
+
+    /* ══════════════════════════════════════════
+       RESPONSIVE
+       ══════════════════════════════════════════ */
+    @media (max-width: 980px) {
+      .stack-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 900px) {
+      .site-header {
+        inset: auto 16px 16px auto;
+        padding: 0;
+        z-index: 140;
+        pointer-events: none;
+      }
+      .site-header .nav {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        gap: 0;
+        border: 0;
+        background: none;
+        box-shadow: none;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        border-radius: 0;
+        transform: none !important;
+        overflow: visible;
+        pointer-events: auto;
+      }
+      .site-header .brand {
+        position: absolute;
+        right: 60px;
+        bottom: 6px;
+        padding: 8px 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--glass-overlay), var(--bg-soft);
+        -webkit-backdrop-filter: blur(24px) saturate(180%);
+        backdrop-filter: blur(24px) saturate(180%);
+        box-shadow:
+          var(--shadow-md),
+          inset 0 1px 0 var(--glass-highlight-top),
+          inset 0 -1px 0 var(--glass-highlight-bottom);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(8px);
+        pointer-events: none;
+        transition: opacity var(--nav-ease), visibility var(--nav-ease), transform var(--nav-ease);
+        max-width: min(200px, calc(100vw - 100px));
+      }
+      .site-header .brand-text { overflow: hidden; text-overflow: ellipsis; }
+      .site-header .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        width: 52px; height: 52px;
+        border-radius: 50%;
+        border: 1px solid var(--line-strong);
+        background: var(--glass-overlay), var(--bg-soft);
+        -webkit-backdrop-filter: blur(24px) saturate(180%);
+        backdrop-filter: blur(24px) saturate(180%);
+        box-shadow:
+          var(--shadow-md),
+          inset 0 1px 0 var(--glass-highlight-top),
+          inset 0 -1px 0 var(--glass-highlight-bottom);
+      }
+      .site-header .nav-panel {
+        position: absolute;
+        right: 0;
+        bottom: 64px;
+        width: min(300px, calc(100vw - 32px));
+        display: grid;
+        justify-items: stretch;
+        gap: 12px;
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--glass-overlay), var(--bg-soft);
+        -webkit-backdrop-filter: blur(28px) saturate(180%);
+        backdrop-filter: blur(28px) saturate(180%);
+        box-shadow:
+          var(--shadow-lg),
+          inset 0 1px 0 var(--glass-highlight-top),
+          inset 0 -1px 0 var(--glass-highlight-bottom);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(10px) scale(0.98);
+        transition: opacity var(--nav-ease), visibility var(--nav-ease), transform var(--nav-ease);
+        border-left: none;
+        padding-left: 16px;
+      }
+      .site-header .nav.is-open .brand,
+      .site-header .nav.is-open .nav-panel {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translate(0,0) scale(1);
+      }
+      .site-header .nav-links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+      }
+      .site-header .nav-link {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 10px 16px;
+        border-radius: var(--radius-sm);
+      }
+      .site-header .controls {
+        width: 100%;
+        justify-content: space-between;
+        margin-left: 0;
+      }
+      .site-header .lang-switch { flex: 1 1 auto; justify-content: space-between; }
+      .site-header .lang-btn { flex: 1 1 0; }
+
+      main { padding-top: 0; }
+      section { scroll-margin-top: 28px; }
+
+      .hero { padding: 80px 20px 50px; }
+      .hero .bookend-mark { flex-wrap: wrap; justify-content: center; gap: 12px; }
+      .bookend-mark-sep { display: none; }
+      .section-watermark {
+        font-size: clamp(4rem, 22vw, 7rem);
+        top: clamp(10px, 2vw, 18px);
+        right: clamp(12px, 3vw, 22px);
+      }
+    }
+
+    @media (min-width: 901px) {
+      .nav:hover {
+        box-shadow:
+          var(--shadow-md),
+          inset 0 1px 0 var(--glass-highlight-top),
+          inset 0 -1px 0 var(--glass-highlight-bottom);
+        border-color: var(--line-strong);
+      }
+
+      /* ── Dock-mode nav (desktop) — inspired by React Bits <Dock /> ── */
+      .nav-panel {
+        border-left: none;
+        padding-left: 0;
+        gap: 14px;
+      }
+
+      .nav-links {
+        gap: 4px;
+        padding: 3px 6px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: var(--glass-overlay), var(--accent-soft);
+        box-shadow:
+          inset 0 1px 0 var(--glass-tint-soft),
+          inset 0 -1px 0 var(--glass-highlight-bottom);
+        align-items: center;
+      }
+
+      .nav-link {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        flex: 0 0 auto;
+        justify-content: center;
+        border-radius: 50%;
+        background: transparent;
+        border-color: transparent;
+        color: var(--muted);
+        font-size: 0;
+        letter-spacing: 0;
+        will-change: transform, width, height;
+        transition:
+          color var(--nav-ease),
+          background var(--nav-ease),
+          border-color var(--nav-ease),
+          box-shadow var(--nav-ease),
+          transform var(--nav-ease);
+      }
+      /* Graceful dock relaxation — only animate width/height when leaving */
+      .nav-links.is-relaxing .nav-link {
+        transition:
+          color var(--nav-ease),
+          background var(--nav-ease),
+          border-color var(--nav-ease),
+          box-shadow var(--nav-ease),
+          transform var(--nav-ease),
+          width 460ms cubic-bezier(0.34, 1.56, 0.64, 1),
+          height 460ms cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .nav-links.is-relaxing .nav-link__icon svg {
+        transition: width 460ms cubic-bezier(0.34, 1.56, 0.64, 1), height 460ms cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      .nav-link__icon {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+      }
+      .nav-link__icon svg {
+        width: 50%;
+        height: 50%;
+        max-width: 26px;
+        max-height: 26px;
+        display: block;
+      }
+
+      /* Text label collapsed to sr-only on desktop — icon alone identifies section */
+      .nav-link__text {
+        position: absolute;
+        width: 1px; height: 1px;
+        padding: 0; margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .nav-link:hover,
+      .nav-link:focus-visible {
+        color: var(--accent);
+        background: var(--bg-soft);
+        border-color: var(--line);
+        box-shadow: 0 6px 16px rgba(31, 27, 22, 0.08);
+        transform: translateY(-2px);
+      }
+      html[data-theme="dark"] .nav-link:hover,
+      html[data-theme="dark"] .nav-link:focus-visible {
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+      }
+
+      .nav-link[aria-current="true"] {
+        color: var(--accent);
+        background: var(--bg-soft);
+        border-color: var(--accent);
+      }
+
+      /* ── Lang switch + theme toggle — echo the dock tray ── */
+      .lang-switch {
+        position: relative;
+        background: var(--glass-overlay), var(--accent-soft);
+        padding: 3px;
+        gap: 0;
+        box-shadow:
+          inset 0 1px 0 var(--glass-tint-soft),
+          inset 0 -1px 0 var(--glass-highlight-bottom);
+        --lang-count: 3;
+        --lang-index: 0;
+      }
+      .lang-switch:hover { border-color: var(--line); }
+
+      /* Sliding active-pill indicator — slides between buttons */
+      .lang-switch::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        bottom: 3px;
+        width: calc((100% - 6px) / var(--lang-count));
+        left: calc(3px + var(--lang-index) * (100% - 6px) / var(--lang-count));
+        background: linear-gradient(180deg, var(--bg-soft) 0%, var(--accent-soft) 100%);
+        border: 1px solid var(--accent);
+        border-radius: 999px;
+        box-shadow:
+          0 4px 14px rgba(27, 58, 92, 0.20),
+          inset 0 1px 0 rgba(255, 255, 255, 0.55);
+        transition:
+          left 520ms cubic-bezier(0.34, 1.56, 0.64, 1),
+          box-shadow 360ms ease;
+        z-index: 0;
+        pointer-events: none;
+      }
+      html[data-theme="dark"] .lang-switch::before {
+        box-shadow:
+          0 4px 14px rgba(138, 176, 212, 0.26),
+          inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      }
+      .lang-switch:hover::before {
+        box-shadow:
+          0 6px 18px rgba(27, 58, 92, 0.26),
+          inset 0 1px 0 rgba(255, 255, 255, 0.55);
+      }
+
+      .lang-btn {
+        position: relative;
+        z-index: 1;
+        height: 34px;
+        min-width: 36px;
+        flex: 1 1 0;
+        border: 1px solid transparent;
+        background: transparent;
+        transition: color var(--nav-ease), transform var(--nav-ease);
+      }
+      .lang-btn:hover {
+        color: var(--accent);
+        background: transparent;
+        box-shadow: none;
+        transform: translateY(-1px);
+      }
+      .lang-btn.is-active {
+        background: transparent;
+        color: var(--accent);
+        border-color: transparent;
+        box-shadow: none;
+        transform: translateY(0);
+      }
+      .lang-btn.is-active:hover { transform: translateY(0); }
+
+      .theme-toggle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: var(--accent-soft);
+        border-color: var(--line);
+        color: var(--muted);
+        overflow: hidden;
+        isolation: isolate;
+        transition: background var(--nav-ease), border-color var(--nav-ease), color var(--nav-ease), box-shadow var(--nav-ease), transform var(--nav-ease);
+      }
+      .theme-toggle:hover {
+        color: var(--accent);
+        background: var(--bg-soft);
+        border-color: var(--accent);
+        box-shadow:
+          0 6px 16px rgba(31, 27, 22, 0.08),
+          0 0 0 5px var(--accent-soft);
+        transform: translateY(-2px);
+      }
+      html[data-theme="dark"] .theme-toggle:hover {
+        box-shadow:
+          0 6px 16px rgba(0, 0, 0, 0.28),
+          0 0 0 5px var(--accent-soft);
+      }
+
+      /* Ripple — radial bloom from button center on click */
+      .theme-toggle::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: radial-gradient(circle at center, var(--accent) 0%, var(--accent) 38%, transparent 72%);
+        opacity: 0;
+        transform: scale(0.4);
+        pointer-events: none;
+        z-index: 0;
+      }
+      .theme-toggle--ripple::after {
+        animation: theme-ripple 620ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      }
+      @keyframes theme-ripple {
+        0%   { opacity: 0.45; transform: scale(0.4); }
+        70%  { opacity: 0.20; }
+        100% { opacity: 0;    transform: scale(5.5); }
+      }
+
+      .theme-toggle__icon {
+        position: relative;
+        z-index: 1;
+        font-size: 1rem;
+        display: inline-block;
+        transition:
+          transform 480ms cubic-bezier(0.34, 1.56, 0.64, 1),
+          opacity 280ms ease-out;
+      }
+      .theme-toggle:hover .theme-toggle__icon {
+        transform: rotate(-22deg) scale(1.15);
+      }
+      .theme-toggle--swapping .theme-toggle__icon {
+        transform: rotate(220deg) scale(0.2);
+        opacity: 0;
+        transition:
+          transform 240ms cubic-bezier(0.55, 0, 0.68, 0.19),
+          opacity 200ms ease-in;
+      }
+    }
+
+    @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+      .nav, .nav-panel, .panel { background: var(--panel-solid); }
+    }
+
+    /* ── View Transitions (theme + language cross-fade) ── */
+    @supports (view-transition-name: root) {
+      ::view-transition-old(root),
+      ::view-transition-new(root) {
+        animation-duration: 360ms;
+        animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      ::view-transition-old(root) { animation-name: vt-fade-out; }
+      ::view-transition-new(root) { animation-name: vt-fade-in; }
+      @keyframes vt-fade-out { to { opacity: 0; } }
+      @keyframes vt-fade-in  { from { opacity: 0; } }
+
+      /* Theme toggle: circular reveal from cursor — overrides default fade */
+      html.theme-transition::view-transition-old(root) {
+        animation: none;
+        z-index: 1;
+      }
+      html.theme-transition::view-transition-new(root) {
+        animation: theme-circular-reveal 720ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        z-index: 2;
+      }
+      @keyframes theme-circular-reveal {
+        from { clip-path: circle(0 at var(--theme-origin-x, 50%) var(--theme-origin-y, 50%)); }
+        to   { clip-path: circle(var(--theme-origin-r, 150%) at var(--theme-origin-x, 50%) var(--theme-origin-y, 50%)); }
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+        transition-delay: 0ms !important;
+      }
+      .reveal,
+      .reveal .section-head, .reveal .section-head-divider,
+      .reveal .about-prose p, .reveal .tech-card,
+      .reveal .project-card,
+      .reveal .project-card__head, .reveal .project-card__body > *,
+      .reveal .spotify-embed, .reveal .bookend-frame > *,
+      .reveal .epilogue-invitation,
+      .hero .bookend-mark, .hero .bookend-title, .hero .bookend-ornament,
+      .hero .bookend-attribution, .hero-actions,
+      .hero-word, .section-watermark {
+        opacity: 1 !important;
+        transform: none !important;
+        clip-path: none !important;
+      }
+      .reveal.is-visible .project-card .project-progress__fill {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="reading-progress" aria-hidden="true"><div class="reading-progress__fill" id="readingProgressFill"></div></div>
+  <div class="site-shell">
+    <header class="site-header">
+      <nav class="nav" id="siteNav" aria-label="Primary">
+        <a class="brand" href="#home" aria-label="HYSN.NET home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+              <rect width="64" height="64" rx="14" fill="var(--bg, #F8F4EC)"/>
+              <path d="M20 14 C19 24,19 39,20 50 M44 14 C43 24,43 39,44 50 M20 31 C26 29,32 29,44 31" fill="none" stroke="var(--accent, #1B3A5C)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="brand-text">HYSN.NET</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navPanel">
+          <span class="nav-toggle__bars" aria-hidden="true"></span>
+          <span class="sr-only" id="navToggleLabel">Open menu</span>
+        </button>
+
+        <div class="nav-panel" id="navPanel">
+          <div class="nav-links" id="navLinks">
+            <a class="nav-link" href="#home">
+              <span class="nav-link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 L12 4 L21 12"/><path d="M5 10 V20 H19 V10"/><path d="M10 20 V14 H14 V20"/></svg>
+              </span>
+              <span class="nav-link__text" data-i18n="nav.home">Home</span>
+            </a>
+            <a class="nav-link" href="#about">
+              <span class="nav-link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20 C5 15.5 8 13.5 12 13.5 S19 15.5 19 20"/></svg>
+              </span>
+              <span class="nav-link__text" data-i18n="nav.about">About</span>
+            </a>
+            <a class="nav-link" href="#stack">
+              <span class="nav-link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.8"/><path d="M12 7 L7 20"/><path d="M12 7 L17 20"/><path d="M9.2 14 L14.8 14"/></svg>
+              </span>
+              <span class="nav-link__text" data-i18n="nav.stack">Instruments</span>
+            </a>
+            <a class="nav-link" href="#projects">
+              <span class="nav-link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="16" rx="1.5"/><path d="M9 9 H15"/><path d="M9 12 H15"/><path d="M9 15 H13"/></svg>
+              </span>
+              <span class="nav-link__text" data-i18n="nav.projects">Projects</span>
+            </a>
+            <a class="nav-link" href="#listening">
+              <span class="nav-link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 17 V4"/><path d="M14 4 Q17 5 19 7"/><ellipse cx="11" cy="17" rx="3" ry="2.2"/></svg>
+              </span>
+              <span class="nav-link__text" data-i18n="nav.listening">我在聼</span>
+            </a>
+            <a class="nav-link" href="#contact">
+              <span class="nav-link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="1.5"/><path d="M3 8 L12 14 L21 8"/></svg>
+              </span>
+              <span class="nav-link__text" data-i18n="nav.contact">Contact</span>
+            </a>
+          </div>
+
+          <div class="controls">
+            <div class="lang-switch" role="group" aria-label="Language switcher">
+              <button class="lang-btn" type="button" data-lang="zh-Hant">繁</button>
+              <button class="lang-btn" type="button" data-lang="zh-Hans">簡</button>
+              <button class="lang-btn" type="button" data-lang="en">EN</button>
+            </div>
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+              <span class="theme-toggle__icon" id="themeIcon" aria-hidden="true">☼</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ═══ HERO — Book Frontispiece (Opening Bookend) ═══ -->
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="bookend-frame">
+          <div class="bookend-mark">
+            <span class="bookend-year">MMXXVI</span>
+            <span class="bookend-mark-sep" aria-hidden="true"></span>
+            <span class="bookend-kicker" data-i18n="hero.kicker">Harrison的個人網站</span>
+          </div>
+
+          <div class="bookend-body">
+            <h1 class="bookend-title bookend-title--kinetic" id="hero-title"><span class="hero-word">Freiheit</span> <span class="hero-word als">als</span> <span class="hero-word">Autonomie</span></h1>
+            <div class="bookend-ornament" aria-hidden="true">
+              <span class="fleuron">❦</span>
+            </div>
+            <p class="bookend-attribution">
+              <span class="bookend-dash">—</span><span class="bookend-author">Immanuel Kant</span>
+              <span class="bookend-source" data-i18n="hero.source">《道德形而上學的基礎》</span>
+            </p>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#about" data-i18n="hero.ctaPrimary">閱讀關於我</a>
+            <a class="button secondary" href="#contact" data-i18n="hero.ctaSecondary">聯繫我</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ I · ABOUT — Classical Essay Page ═══ -->
+      <section class="section reveal" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <div class="panel">
+            <span class="section-watermark" aria-hidden="true">I</span>
+            <div class="section-head">
+              <h2 class="section-title" id="about-title" data-i18n="about.title">關於我</h2>
+            </div>
+            <div class="section-head-divider" aria-hidden="true"></div>
+            <div class="about-prose">
+              <p data-i18n="about.body1">我是一名學生，行走在幾條看似迥異、實則相通的道路上。</p>
+              <p data-i18n="about.body2">我著迷於人工智慧——不僅是技術本身，更是它所引發的深層問題：機器能否思考？智慧的邊界在哪裡？這些追問自然地將我引向西方哲學的長河。從蘇格拉底的詰問到維根斯坦的語言遊戲，哲學教會我在確信之前先學會懷疑，在回答之前先學會提問。</p>
+              <p data-i18n="about.body3">編程是我將想法落地的方式。寫代碼與寫論證有著相似的骨架：拆解問題、構建邏輯、反覆迭代，直到混沌化為秩序。</p>
+              <p data-i18n="about.body4">而古典漢語是我回望自身文化根源的路徑。古人以極精煉的文字承載廣闊的意涵，這種「少即是多」的美學，深刻影響了我思考與表達的方式。這四者在我看來並非四個獨立的興趣，而是同一種衝動的不同面向——理解世界如何運作，語言如何塑造思想，以及我們如何在傳統與前沿之間找到自己的位置。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ II · INSTRUMENTS — Lab Notebook ═══ -->
+      <section class="section reveal" id="stack" aria-labelledby="stack-title">
+        <div class="container">
+          <div class="panel panel--lab">
+            <span class="section-watermark" aria-hidden="true">II</span>
+            <div class="section-head">
+              <h2 class="section-title" id="stack-title" data-i18n="stack.title">工具</h2>
+            </div>
+            <div class="section-head-divider" aria-hidden="true"></div>
+            <div class="stack-grid">
+              <article class="tech-card">
+                <div class="tech-icon" aria-hidden="true">
+                  <img class="icon-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" data-fallback="./cpp.svg" alt="C++ icon" width="34" height="34" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+                  <span class="icon-fallback">C++</span>
+                </div>
+                <h3 class="tech-name">C++</h3>
+                <p class="tech-role">SYSTEMS · ALGORITHMS</p>
+                <p class="tech-desc" data-i18n="stack.cpp">一門講究精確、性能與控制力的語言，我藉助它來學習算法與計算機原理。</p>
+              </article>
+              <article class="tech-card">
+                <div class="tech-icon" aria-hidden="true">
+                  <svg height="1em" style="flex:none;line-height:1" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><title>Antigravity</title><path clip-rule="evenodd" d="M20.998 10.949H24v3.102h-3v3.028h-1.487V20H18v-2.921h-1.487V20H15v-2.921H9V20H7.488v-2.921H6V20H4.487v-2.921H3V14.05H0V10.95h3V5h17.998v5.949zM6 10.949h1.488V8.102H6v2.847zm10.51 0H18V8.102h-1.49v2.847z" fill="#D97757" fill-rule="evenodd"></path></svg>
+                </div>
+                <h3 class="tech-name">Claude Code</h3>
+                <p class="tech-role">AGENT · LONG-CONTEXT</p>
+                <p class="tech-desc" data-i18n="stack.claude">偏向深度協作與長上下文推理的編碼方式，我使用它來規劃項目。</p>
+              </article>
+              <article class="tech-card">
+                <div class="tech-icon" aria-hidden="true">
+                  <svg height="1em" style="flex:none;line-height:1" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><title>Codex</title><path d="M19.503 0H4.496A4.496 4.496 0 000 4.496v15.007A4.496 4.496 0 004.496 24h15.007A4.496 4.496 0 0024 19.503V4.496A4.496 4.496 0 0019.503 0z" fill="#fff"></path><path d="M9.064 3.344a4.578 4.578 0 012.285-.312c1 .115 1.891.54 2.673 1.275.01.01.024.017.037.021a.09.09 0 00.043 0 4.55 4.55 0 013.046.275l.047.022.116.057a4.581 4.581 0 012.188 2.399c.209.51.313 1.041.315 1.595a4.24 4.24 0 01-.134 1.223.123.123 0 00.03.115c.594.607.988 1.33 1.183 2.17.289 1.425-.007 2.71-.887 3.854l-.136.166a4.548 4.548 0 01-2.201 1.388.123.123 0 00-.081.076c-.191.551-.383 1.023-.74 1.494-.9 1.187-2.222 1.846-3.711 1.838-1.187-.006-2.239-.44-3.157-1.302a.107.107 0 00-.105-.024c-.388.125-.78.143-1.204.138a4.441 4.441 0 01-1.945-.466 4.544 4.544 0 01-1.61-1.335c-.152-.202-.303-.392-.414-.617a5.81 5.81 0 01-.37-.961 4.582 4.582 0 01-.014-2.298.124.124 0 00.006-.056.085.085 0 00-.027-.048 4.467 4.467 0 01-1.034-1.651 3.896 3.896 0 01-.251-1.192 5.189 5.189 0 01.141-1.6c.337-1.112.982-1.985 1.933-2.618.212-.141.413-.251.601-.33.215-.089.43-.164.646-.227a.098.098 0 00.065-.066 4.51 4.51 0 01.829-1.615 4.535 4.535 0 011.837-1.388zm3.482 10.565a.637.637 0 000 1.272h3.636a.637.637 0 100-1.272h-3.636zM8.462 9.23a.637.637 0 00-1.106.631l1.272 2.224-1.266 2.136a.636.636 0 101.095.649l1.454-2.455a.636.636 0 00.005-.64L8.462 9.23z" fill="url(#lobe-icons-codex-fill)"></path><defs><linearGradient gradientUnits="userSpaceOnUse" id="lobe-icons-codex-fill" x1="12" x2="12" y1="3" y2="21"><stop stop-color="#B1A7FF"></stop><stop offset=".5" stop-color="#7A9DFF"></stop><stop offset="1" stop-color="#3941FF"></stop></linearGradient></defs></svg>
+                </div>
+                <h3 class="tech-name">Codex</h3>
+                <p class="tech-role">PROTOTYPING · EDITING</p>
+                <p class="tech-desc" data-i18n="stack.codex">擅長把概念快速推進為可執行原型，它協助我進行編碼工作。</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ III · PROJECTS — Interactive Archive ═══ -->
+      <section class="section reveal" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="panel">
+            <span class="section-watermark" aria-hidden="true">III</span>
+            <div class="section-head">
+              <h2 class="section-title" id="projects-title" data-i18n="projects.title">項目</h2>
+            </div>
+            <div class="section-head-divider" aria-hidden="true"></div>
+
+            <div class="projects-grid" id="projectsGrid">
+              <article class="project-card" data-status="published" style="--progress: 100%">
+                <header class="project-card__head">
+                  <span class="project-number">№ 001 / 002</span>
+                  <span class="project-status project-status--published" data-i18n="projects.statusPublished">已公開</span>
+                </header>
+                <div class="project-card__body">
+                  <h3 class="project-title" data-i18n="projects.p1Title">HYSN.NET</h3>
+                  <p class="project-desc" data-i18n="projects.p1Desc">這個個人網站本身就是一個項目：以古典排版承載現代技術實踐。</p>
+                  <dl class="project-meta-list">
+                    <div class="project-meta-row">
+                      <dt data-i18n="projects.metaCreated">CREATED</dt>
+                      <dd>MMXXVI</dd>
+                    </div>
+                    <div class="project-meta-row">
+                      <dt data-i18n="projects.metaStack">STACK</dt>
+                      <dd>
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JS</span>
+                        <span class="project-tag">i18n</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <div class="project-progress">
+                    <span data-i18n="projects.progressLabel">Completion</span>
+                    <div class="project-progress__bar">
+                      <div class="project-progress__fill"></div>
+                    </div>
+                    <span class="project-progress__value">100%</span>
+                  </div>
+                  <a class="project-link" href="#home">
+                    <span data-i18n="projects.p1LinkText">返回頁首</span>
+                    <span class="arrow" aria-hidden="true">↑</span>
+                  </a>
+                </div>
+              </article>
+
+              <article class="project-card" data-status="progress" style="--progress: 45%">
+                <header class="project-card__head">
+                  <span class="project-number">№ 002 / 002</span>
+                  <span class="project-status project-status--progress" data-i18n="projects.statusProgress">進行中</span>
+                </header>
+                <div class="project-card__body">
+                  <h3 class="project-title" data-i18n="projects.p2Title">Blog</h3>
+                  <p class="project-desc" data-i18n="projects.p2Desc">思想的札記。關於 AI、哲學與古典漢語的斷想與長文。</p>
+                  <dl class="project-meta-list">
+                    <div class="project-meta-row">
+                      <dt data-i18n="projects.metaCreated">CREATED</dt>
+                      <dd>2026 →</dd>
+                    </div>
+                    <div class="project-meta-row">
+                      <dt data-i18n="projects.metaLang">LANG</dt>
+                      <dd>
+                        <span class="project-tag">ZH</span>
+                        <span class="project-tag">EN</span>
+                        <span class="project-tag">DE</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <div class="project-progress">
+                    <span data-i18n="projects.progressLabel">Completion</span>
+                    <div class="project-progress__bar">
+                      <div class="project-progress__fill"></div>
+                    </div>
+                    <span class="project-progress__value">45%</span>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ IV · LISTENING — Warm Radio Booth ═══ -->
+      <section class="section reveal" id="listening" aria-labelledby="listening-title">
+        <div class="container">
+          <div class="panel panel--warm">
+            <span class="section-watermark" aria-hidden="true">IV</span>
+            <div class="section-head">
+              <div class="section-title-row">
+                <h2 class="section-title" id="listening-title" data-i18n="listening.title">我在聼</h2>
+                <span class="section-note" data-i18n="listening.note">播放器由 Spotify 提供，在不受支持的區域可能無法正常顯示</span>
+              </div>
+            </div>
+            <div class="section-head-divider" aria-hidden="true"></div>
+            <div class="listening-wrap">
+              <iframe class="spotify-embed" style="border-radius:12px" src="https://open.spotify.com/embed/track/0K2WjMLZYr09LKwurGRYRE?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Spotify player 1"></iframe>
+              <iframe class="spotify-embed" style="border-radius:12px" src="https://open.spotify.com/embed/track/5b7OgznPJJr1vHNYGyvxau?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Spotify player 2"></iframe>
+              <iframe class="spotify-embed" style="border-radius:12px" src="https://open.spotify.com/embed/track/3spdoTYpuCpmq19tuD0bOe?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Spotify player 3"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ V · EPILOGUE — Philosophical Bookend (echoes Hero) ═══ -->
+      <section class="section reveal" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="panel panel--epilogue">
+            <span class="section-watermark" aria-hidden="true">V</span>
+            <div class="bookend-frame">
+              <div class="bookend-mark">
+                <span class="bookend-year">EPISTOLA</span>
+                <span class="bookend-mark-sep" aria-hidden="true"></span>
+                <span class="bookend-kicker" data-i18n="contact.kicker">Contact</span>
+              </div>
+
+              <div class="bookend-body">
+                <h2 class="bookend-title bookend-title--kinetic" id="contact-title"><span class="hero-word">Sapere</span> <span class="hero-word">aude</span></h2>
+                <div class="bookend-ornament" aria-hidden="true">
+                  <span class="fleuron">❦</span>
+                </div>
+                <p class="bookend-attribution">
+                  <span class="bookend-dash">—</span><span class="bookend-author">Horatius</span>
+                  <span class="bookend-source" data-i18n="contact.source">Epistulae I, ii, 40</span>
+                </p>
+              </div>
+
+              <div class="epilogue-invitation">
+                <p class="epilogue-text" data-i18n="contact.body">若您有意探討西方哲學、人工智能或相關議題，或願為本站提供建議，歡迎來信交流。</p>
+                <a class="contact-link" href="mailto:harrison@hysn.net">harrison@hysn.net</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-strip">
+          <div class="footer-brand" aria-hidden="true">
+            <div class="footer-brand-row">
+              <span class="footer-brand-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                  <rect width="64" height="64" rx="14" fill="var(--bg, #F8F4EC)"/>
+                  <path d="M20 14 C19 24,19 39,20 50 M44 14 C43 24,43 39,44 50 M20 31 C26 29,32 29,44 31" fill="none" stroke="var(--accent, #1B3A5C)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span class="footer-brand-text">HYSN.NET</span>
+            </div>
+            <span class="footer-brand-est">EST. MMXXV</span>
+          </div>
+
+          <div class="footer-ornament" aria-hidden="true">
+            <span class="footer-ornament__fleuron">❦</span>
+            <span class="footer-ornament__year">MMXXVI</span>
+          </div>
+
+          <nav class="footer-imprint" aria-label="Site navigation">
+            <div class="footer-imprint-row">
+              <a href="/colophon.html" data-i18n="footerNav.colophon">牌記</a>
+              <span class="footer-imprint__sep" aria-hidden="true">·</span>
+              <a href="/privacy.html" data-i18n="footerNav.privacy">隱私</a>
+            </div>
+            <a class="footer-imprint__source" href="https://github.com/hrs-y/PersonalWebsite" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+              <span data-i18n="footerSource">源碼公開於 GitHub</span>
+            </a>
+          </nav>
+        </div>
+
+        <p class="footer-legal" data-i18n="footerLegal">本網站所展示之 C++ 標誌為 Standard C++ Foundation 相關方之商標；Claude Code 標誌為 Anthropic 之商標；Codex 標誌為 OpenAI 之商標。所有商標均為其各自持有人之財產，本站使用僅供說明目的，不構成任何形式之關聯或背書。</p>
+
+        <p class="footer-copy" data-i18n="footer">&copy;2026 HYSN.NET</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    var translations = {
+      "zh-Hant": {
+        nav: { home: "首頁", about: "關於我", stack: "工具", projects: "項目", listening: "我在聼", contact: "聯繫我" },
+        hero: {
+          kicker: "Harrison的個人網站",
+          source: "《道德形而上學的基礎》",
+          ctaPrimary: "閱讀關於我",
+          ctaSecondary: "聯繫我"
+        },
+        about: { title: "關於我",
+          body1: "我是一名學生，行走在幾條看似迥異、實則相通的道路上。",
+          body2: "我著迷於人工智慧——不僅是技術本身，更是它所引發的深層問題：機器能否思考？智慧的邊界在哪裡？這些追問自然地將我引向西方哲學的長河。從蘇格拉底的詰問到維根斯坦的語言遊戲，哲學教會我在確信之前先學會懷疑，在回答之前先學會提問。",
+          body3: "編程是我將想法落地的方式。寫代碼與寫論證有著相似的骨架：拆解問題、構建邏輯、反覆迭代，直到混沌化為秩序。",
+          body4: "而古典漢語是我回望自身文化根源的路徑。古人以極精煉的文字承載廣闊的意涵，這種「少即是多」的美學，深刻影響了我思考與表達的方式。這四者在我看來並非四個獨立的興趣，而是同一種衝動的不同面向——理解世界如何運作，語言如何塑造思想，以及我們如何在傳統與前沿之間找到自己的位置。"
+        },
+        stack: { title: "工具",
+          cpp: "一門講究精確、性能與控制力的語言，我藉助它來學習算法與計算機原理。",
+          claude: "偏向深度協作與長上下文推理的編碼方式，我使用它來規劃項目。",
+          codex: "擅長把概念快速推進為可執行原型，它協助我進行編碼工作。"
+        },
+        projects: {
+          title: "項目",
+          statusPublished: "已公開",
+          statusProgress: "進行中",
+          metaCreated: "時間",
+          metaStack: "技術",
+          metaLang: "語言",
+          progressLabel: "完成度",
+          p1Title: "HYSN.NET",
+          p1Desc: "這個個人網站本身就是一個項目：以古典排版承載現代技術實踐。",
+          p1LinkText: "返回頁首",
+          p2Title: "Blog",
+          p2Desc: "思想的札記。關於 AI、哲學與古典漢語的斷想與長文。"
+        },
+        listening: {
+          title: "我在聼",
+          note: ""
+        },
+        contact: {
+          kicker: "Contact",
+          source: "賀拉斯《書信集》第一卷第二篇",
+          body: "若您有意探討西方哲學、人工智能或相關議題，或願為本站提供建議，歡迎來信交流。"
+        },
+        footer: "\u00a92026 HYSN.NET",
+        footerNav: { colophon: "牌記", privacy: "隱私" },
+        footerLegal: "本網站所展示之 C++ 標誌為 Standard C++ Foundation 相關方之商標；Claude Code 標誌為 Anthropic 之商標；Codex 標誌為 OpenAI 之商標。所有商標均為其各自持有人之財產，本站使用僅供說明目的，不構成任何形式之關聯或背書。",
+        footerSource: "源碼公開於 GitHub",
+        ui: { openMenu: "開啟導覽", closeMenu: "關閉導覽", toggleToDark: "切換為深色模式", toggleToLight: "切換為淺色模式" }
+      },
+      en: {
+        nav: { home: "Home", about: "About", stack: "Instruments", projects: "Projects", listening: "Listening", contact: "Contact" },
+        hero: {
+          kicker: "Harrison's Personal Website",
+          source: "Groundwork of the Metaphysic of Morals",
+          ctaPrimary: "Read About Me",
+          ctaSecondary: "Contact"
+        },
+        about: { title: "About",
+          body1: "I am a student, moving along several paths that may seem different on the surface yet are deeply connected underneath.",
+          body2: "I am fascinated by artificial intelligence\u2014not only as a technology, but as a field that opens deeper questions: Can machines think? Where are the boundaries of intelligence? Such questions lead me naturally into the long river of Western philosophy. From the questioning of Socrates to Wittgenstein\u2019s language games, philosophy has taught me to learn doubt before certainty, and questions before answers.",
+          body3: "Programming is the way I give form to ideas. Writing code and writing an argument share a similar structure: break down the problem, build the logic, and iterate until chaos becomes order.",
+          body4: "Classical Chinese is the path through which I return to the roots of my own culture. The ancients carried vast meaning with highly compressed language, and this aesthetic of \u2018less is more\u2019 has deeply shaped the way I think and express myself. To me, these four are not separate interests, but different faces of the same impulse: to understand how the world works, how language shapes thought, and how one may find one\u2019s place between tradition and the frontier."
+        },
+        stack: { title: "Instruments",
+          cpp: "A language of precision, performance, and control; I use it to study algorithms and computer science fundamentals.",
+          claude: "A coding workflow oriented toward deep collaboration and long-context reasoning; I use it to plan projects.",
+          codex: "Good at pushing ideas quickly into executable prototypes; it helps me with hands-on coding work."
+        },
+        projects: {
+          title: "Projects",
+          statusPublished: "Published",
+          statusProgress: "In Progress",
+          metaCreated: "Created",
+          metaStack: "Stack",
+          metaLang: "Lang",
+          progressLabel: "Completion",
+          p1Title: "HYSN.NET",
+          p1Desc: "This personal website is itself a project: classical typography carrying modern web practice.",
+          p1LinkText: "Back to Top",
+          p2Title: "Blog",
+          p2Desc: "A notebook of thoughts. Essays and fragments on AI, philosophy, and Classical Chinese."
+        },
+        listening: {
+          title: "What I'm Listening To",
+          note: ""
+        },
+        contact: {
+          kicker: "Contact",
+          source: "Horace, Epistulae I, ii, 40",
+          body: "If you would like to discuss Western philosophy, artificial intelligence, or related questions\u2014or offer suggestions for this site\u2014you are warmly welcome to write."
+        },
+        footer: "\u00a92026 HYSN.NET",
+        footerNav: { colophon: "Colophon", privacy: "Privacy" },
+        footerLegal: "The C++ logo shown on this site is a trademark of parties related to the Standard C++ Foundation; the Claude Code logo is a trademark of Anthropic; the Codex logo is a trademark of OpenAI. All trademarks are the property of their respective owners. Their use on this site is for explanatory purposes only and does not imply any affiliation or endorsement.",
+        footerSource: "Source available on GitHub",
+        ui: { openMenu: "Open menu", closeMenu: "Close menu", toggleToDark: "Switch to dark mode", toggleToLight: "Switch to light mode" }
+      },
+      "zh-Hans": {
+        nav: { home: "首页", about: "关于我", stack: "工具", projects: "项目", listening: "我在听", contact: "联系我" },
+        hero: {
+          kicker: "Harrison的个人网站",
+          source: "《道德形而上学的基础》",
+          ctaPrimary: "阅读关于我",
+          ctaSecondary: "联系我"
+        },
+        about: { title: "关于我",
+          body1: "我是一名学生，行走在几条看似迥异、实则相通的道路上。",
+          body2: "我着迷于人工智能——不仅是技术本身，更是它所引发的深层问题：机器能否思考？智慧的边界在哪里？这些追问自然地将我引向西方哲学的长河。从苏格拉底的诘问到维特根斯坦的语言游戏，哲学教会我在确信之前先学会怀疑，在回答之前先学会提问。",
+          body3: "编程是我将想法落地的方式。写代码与写论证有着相似的骨架：拆解问题、构建逻辑、反复迭代，直到混沌化为秩序。",
+          body4: "而古典汉语是我回望自身文化根源的路径。古人以极精炼的文字承载广阔的意涵，这种「少即是多」的美学，深刻影响了我思考与表达的方式。这四者在我看来并非四个独立的兴趣，而是同一种冲动的不同面向——理解世界如何运作，语言如何塑造思想，以及我们如何在传统与前沿之间找到自己的位置。"
+        },
+        stack: { title: "工具",
+          cpp: "一门讲究精确、性能与控制力的语言，我借助它来学习算法与计算机原理。",
+          claude: "偏向深度协作与长上下文推理的编码方式，我使用它来规划项目。",
+          codex: "擅长把概念快速推进为可执行原型，它协助我进行编码工作。"
+        },
+        projects: {
+          title: "项目",
+          statusPublished: "已公开",
+          statusProgress: "进行中",
+          metaCreated: "时间",
+          metaStack: "技术",
+          metaLang: "语言",
+          progressLabel: "完成度",
+          p1Title: "HYSN.NET",
+          p1Desc: "这个个人网站本身就是一个项目：以古典排版承载现代技术实践。",
+          p1LinkText: "返回页首",
+          p2Title: "Blog",
+          p2Desc: "思想的札记。关于 AI、哲学与古典汉语的断想与长文。"
+        },
+        listening: {
+          title: "我在听",
+          note: "播放器由 Spotify 提供，在不受支持的区域可能无法正常显示"
+        },
+        contact: {
+          kicker: "Contact",
+          source: "贺拉斯《书信集》第一卷第二篇",
+          body: "若您有意探讨西方哲学、人工智能或相关议题，或愿为本站提供建议，欢迎来信交流。"
+        },
+        footer: "\u00a92026 HYSN.NET",
+        footerNav: { colophon: "牌记", privacy: "隐私" },
+        footerLegal: "本网站所展示之 C++ 标志为 Standard C++ Foundation 相关方之商标；Claude Code 标志为 Anthropic 之商标；Codex 标志为 OpenAI 之商标。所有商标均为其各自持有人之财产，本站使用仅供说明目的，不构成任何形式之关联或背书。",
+        footerSource: "源码公开于 GitHub",
+        ui: { openMenu: "打开导览", closeMenu: "关闭导览", toggleToDark: "切换为深色模式", toggleToLight: "切换为浅色模式" }
+      }
+    };
+
+    var root = document.documentElement;
+    var nav = document.getElementById("siteNav");
+    var navToggle = document.getElementById("navToggle");
+    var navToggleLabel = document.getElementById("navToggleLabel");
+    var langButtons = Array.from(document.querySelectorAll(".lang-btn"));
+    var navLinks = Array.from(document.querySelectorAll(".nav-link"));
+    var sectionNodes = Array.from(document.querySelectorAll("main section[id]"));
+    var themeToggle = document.getElementById("themeToggle");
+    var themeIcon = document.getElementById("themeIcon");
+    var themeMeta = document.querySelector('meta[name="theme-color"]');
+    var prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+    var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    var storage = {
+      get: function(key) { try { return localStorage.getItem(key); } catch(e) { return null; } },
+      set: function(key, val) { try { localStorage.setItem(key, val); } catch(e) {} }
+    };
+
+    function withViewTransition(fn) {
+      if (prefersReducedMotion.matches || typeof document.startViewTransition !== "function") {
+        fn();
+        return;
+      }
+      document.startViewTransition(fn);
+    }
+
+    /* Wait for webfonts so kinetic typography doesn't FOUT mid-animation */
+    (function waitForFonts() {
+      var marked = false;
+      function mark() {
+        if (marked) return;
+        marked = true;
+        document.documentElement.classList.add("fonts-loaded");
+      }
+      if (document.fonts && document.fonts.ready && typeof document.fonts.ready.then === "function") {
+        document.fonts.ready.then(mark);
+        setTimeout(mark, 1800); // safety fallback
+      } else {
+        setTimeout(mark, 700);
+      }
+    })();
+
+    function resolveKey(obj, path) {
+      return path.split(".").reduce(function(a, k) { return a && a[k] !== undefined ? a[k] : null; }, obj);
+    }
+
+    function detectLanguage() {
+      var stored = storage.get("hysn-lang");
+      if (stored && translations[stored]) return stored;
+      var bl = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+      if (bl.startsWith("zh")) {
+        if (bl.indexOf("hans") !== -1 || bl.indexOf("cn") !== -1 || bl.indexOf("sg") !== -1 || bl.indexOf("my") !== -1) return "zh-Hans";
+        return "zh-Hant";
+      }
+      return "en";
+    }
+
+    function detectTheme() {
+      var stored = storage.get("hysn-theme");
+      if (stored === "dark" || stored === "light") return stored;
+      return prefersDark.matches ? "dark" : "light";
+    }
+
+    function updateUiLabels(lang) {
+      var cl = translations[lang] ? lang : "en";
+      var isOpen = nav.classList.contains("is-open");
+      var ct = root.getAttribute("data-theme") || "light";
+      navToggleLabel.textContent = isOpen ? translations[cl].ui.closeMenu : translations[cl].ui.openMenu;
+      navToggle.setAttribute("aria-label", navToggleLabel.textContent);
+      themeToggle.setAttribute("aria-label", ct === "dark" ? translations[cl].ui.toggleToLight : translations[cl].ui.toggleToDark);
+    }
+
+    function applyLanguage(lang, persist) {
+      var selected = translations[lang] ? lang : "en";
+      root.lang = selected === "zh-Hant" ? "zh-Hant" : selected;
+      document.querySelectorAll("[data-i18n]").forEach(function(el) {
+        var val = resolveKey(translations[selected], el.getAttribute("data-i18n"));
+        if (val !== null) el.textContent = val;
+      });
+      var langIndex = 0;
+      langButtons.forEach(function(btn, i) {
+        var isActive = btn.dataset.lang === selected;
+        btn.classList.toggle("is-active", isActive);
+        btn.setAttribute("aria-pressed", String(isActive));
+        if (isActive) langIndex = i;
+      });
+      var langSwitch = document.querySelector(".lang-switch");
+      if (langSwitch) langSwitch.style.setProperty("--lang-index", langIndex);
+      updateUiLabels(selected);
+      if (persist) storage.set("hysn-lang", selected);
+    }
+
+    function applyTheme(theme, persist) {
+      var next = theme === "dark" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      themeIcon.textContent = next === "dark" ? "\u263e" : "\u263c";
+      if (themeMeta) themeMeta.setAttribute("content", next === "dark" ? "#141110" : "#F8F4EC");
+      updateUiLabels(root.lang || detectLanguage());
+      if (persist) storage.set("hysn-theme", next);
+    }
+
+    function setCurrentNavLink(id) {
+      navLinks.forEach(function(link) {
+        if (link.getAttribute("href") === "#" + id) {
+          link.setAttribute("aria-current", "true");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+    }
+
+    function toggleMenu(forceState) {
+      var shouldOpen = typeof forceState === "boolean" ? forceState : !nav.classList.contains("is-open");
+      nav.classList.toggle("is-open", shouldOpen);
+      navToggle.setAttribute("aria-expanded", String(shouldOpen));
+      updateUiLabels(root.lang || detectLanguage());
+    }
+
+    function closeMenuIfMobile() {
+      if (window.innerWidth <= 900) toggleMenu(false);
+    }
+
+    navToggle.addEventListener("click", function() { toggleMenu(); });
+
+    document.addEventListener("click", function(e) {
+      var lb = e.target.closest(".lang-btn");
+      if (lb) {
+        var targetLang = lb.dataset.lang;
+        withViewTransition(function() { applyLanguage(targetLang, true); });
+        return;
+      }
+      var nl = e.target.closest(".nav-link");
+      if (nl) { closeMenuIfMobile(); return; }
+      if (window.innerWidth <= 900 && nav.classList.contains("is-open") && !nav.contains(e.target)) {
+        toggleMenu(false);
+      }
+    });
+
+    var resizeRaf = 0;
+    window.addEventListener("resize", function() {
+      if (resizeRaf) return;
+      resizeRaf = requestAnimationFrame(function() {
+        if (window.innerWidth > 900) toggleMenu(false);
+        resizeRaf = 0;
+      });
+    });
+
+    themeToggle.addEventListener("click", function(e) {
+      var current = root.getAttribute("data-theme") || detectTheme();
+      var next = current === "dark" ? "light" : "dark";
+
+      themeToggle.classList.remove("theme-toggle--ripple");
+      void themeToggle.offsetWidth;
+      themeToggle.classList.add("theme-toggle--ripple");
+      themeToggle.classList.add("theme-toggle--swapping");
+
+      var rect = themeToggle.getBoundingClientRect();
+      var originX = rect.left + rect.width / 2;
+      var originY = rect.top + rect.height / 2;
+      var maxR = Math.hypot(
+        Math.max(originX, window.innerWidth - originX),
+        Math.max(originY, window.innerHeight - originY)
+      );
+      root.style.setProperty("--theme-origin-x", originX + "px");
+      root.style.setProperty("--theme-origin-y", originY + "px");
+      root.style.setProperty("--theme-origin-r", maxR + "px");
+
+      var canCircular = !prefersReducedMotion.matches && typeof document.startViewTransition === "function";
+
+      function finishSwap() {
+        setTimeout(function() {
+          themeToggle.classList.remove("theme-toggle--swapping");
+        }, 260);
+      }
+
+      if (!canCircular) {
+        applyTheme(next, true);
+        finishSwap();
+        return;
+      }
+
+      root.classList.add("theme-transition");
+      var transition = document.startViewTransition(function() { applyTheme(next, true); });
+      transition.finished.finally(function() {
+        root.classList.remove("theme-transition");
+      });
+      finishSwap();
+    });
+
+    function handleSystemThemeChange(e) {
+      if (!storage.get("hysn-theme")) applyTheme(e.matches ? "dark" : "light", false);
+    }
+    if (typeof prefersDark.addEventListener === "function") {
+      prefersDark.addEventListener("change", handleSystemThemeChange);
+    } else if (typeof prefersDark.addListener === "function") {
+      prefersDark.addListener(handleSystemThemeChange);
+    }
+
+    function setupRevealObserver() {
+      var els = document.querySelectorAll(".reveal");
+      if (prefersReducedMotion.matches || !("IntersectionObserver" in window)) {
+        els.forEach(function(el) { el.classList.add("is-visible"); });
+        return;
+      }
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+      els.forEach(function(el) { obs.observe(el); });
+    }
+
+    function setupSectionObserver() {
+      if (!sectionNodes.length) return;
+      if (!("IntersectionObserver" in window)) {
+        setCurrentNavLink(location.hash.replace("#", "") || "home");
+        return;
+      }
+      var ratios = new Map();
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          ratios.set(entry.target.id, entry.isIntersecting ? entry.intersectionRatio : 0);
+        });
+        var bestId = "home", bestRatio = -1;
+        ratios.forEach(function(r, id) { if (r > bestRatio) { bestRatio = r; bestId = id; } });
+        setCurrentNavLink(bestId);
+      }, { threshold: [0, 0.15, 0.3, 0.45, 0.6, 0.75], rootMargin: "-18% 0px -42% 0px" });
+      sectionNodes.forEach(function(s) { ratios.set(s.id, 0); obs.observe(s); });
+    }
+
+    document.querySelectorAll(".icon-image").forEach(function(img) {
+      var fallbackEl = img.nextElementSibling;
+      var fallbackResolved = null;
+      if (img.dataset.fallback) {
+        try { fallbackResolved = new URL(img.dataset.fallback, location.href).href; } catch(e) {}
+      }
+      var showTextFallback = function() {
+        img.style.display = "none";
+        if (fallbackEl) fallbackEl.classList.add("is-visible");
+      };
+      img.addEventListener("error", function() {
+        if (fallbackResolved && img.currentSrc !== fallbackResolved && img.src !== fallbackResolved) {
+          img.src = fallbackResolved; return;
+        }
+        showTextFallback();
+      });
+      img.addEventListener("load", function() {
+        img.style.display = "";
+        if (fallbackEl) fallbackEl.classList.remove("is-visible");
+      });
+      if (img.complete && img.naturalWidth === 0) showTextFallback();
+    });
+
+    /* ── Reading progress (JS fallback for browsers without scroll-driven animations) ── */
+    function setupReadingProgress() {
+      var fill = document.getElementById("readingProgressFill");
+      if (!fill) return;
+      if (CSS && CSS.supports && CSS.supports("animation-timeline: scroll()")) return;
+
+      var rafId = 0;
+      function update() {
+        rafId = 0;
+        var doc = document.documentElement;
+        var scrolled = doc.scrollTop || document.body.scrollTop;
+        var max = (doc.scrollHeight - doc.clientHeight) || 1;
+        var pct = Math.max(0, Math.min(1, scrolled / max));
+        fill.style.width = (pct * 100) + "%";
+      }
+      window.addEventListener("scroll", function() {
+        if (!rafId) rafId = requestAnimationFrame(update);
+      }, { passive: true });
+      window.addEventListener("resize", function() {
+        if (!rafId) rafId = requestAnimationFrame(update);
+      });
+      update();
+    }
+
+    /* ── Cursor-tracked specular highlight on the nav (desktop only) ── */
+    function setupNavSpecular() {
+      if (!nav) return;
+      var desktopMQ = window.matchMedia("(min-width: 901px)");
+      var rafId = 0;
+      var nextX = 50, nextY = 0;
+
+      function paint() {
+        rafId = 0;
+        nav.style.setProperty("--nav-light-x", nextX + "%");
+        nav.style.setProperty("--nav-light-y", nextY + "%");
+      }
+
+      function onMove(e) {
+        if (!desktopMQ.matches || prefersReducedMotion.matches) return;
+        var rect = nav.getBoundingClientRect();
+        nextX = ((e.clientX - rect.left) / rect.width) * 100;
+        nextY = ((e.clientY - rect.top) / rect.height) * 100;
+        if (!rafId) rafId = requestAnimationFrame(paint);
+      }
+      function onEnter() {
+        if (!desktopMQ.matches || prefersReducedMotion.matches) return;
+        nav.classList.add("is-tracking");
+      }
+      function onLeave() {
+        nav.classList.remove("is-tracking");
+      }
+
+      nav.addEventListener("pointermove", onMove);
+      nav.addEventListener("pointerenter", onEnter);
+      nav.addEventListener("pointerleave", onLeave);
+    }
+
+    /* ── Dock magnification — mouse-proximity scaling (desktop only) ── */
+    function setupDockMagnification() {
+      var navLinksEl = document.getElementById("navLinks");
+      var items = Array.from(document.querySelectorAll(".nav-link"));
+      if (!navLinksEl || !items.length) return;
+
+      var BASE = 40, MAG = 54, DIST = 140;
+      var desktopMQ = window.matchMedia("(min-width: 901px)");
+      var rafId = 0;
+      var relaxTimer = 0;
+      var mouseX = null;
+
+      function resetSizes() {
+        items.forEach(function(item) {
+          item.style.width = "";
+          item.style.height = "";
+        });
+      }
+
+      function update() {
+        rafId = 0;
+        if (mouseX === null) return;
+        items.forEach(function(item) {
+          var rect = item.getBoundingClientRect();
+          var cx = rect.left + rect.width / 2;
+          var d = Math.abs(mouseX - cx);
+          var size = d >= DIST
+            ? BASE
+            : BASE + (MAG - BASE) * (1 - d / DIST);
+          item.style.width = size + "px";
+          item.style.height = size + "px";
+        });
+      }
+
+      navLinksEl.addEventListener("mouseenter", function() {
+        if (relaxTimer) { clearTimeout(relaxTimer); relaxTimer = 0; }
+        navLinksEl.classList.remove("is-relaxing");
+      });
+
+      navLinksEl.addEventListener("mousemove", function(e) {
+        if (!desktopMQ.matches || prefersReducedMotion.matches) return;
+        mouseX = e.clientX;
+        if (!rafId) rafId = requestAnimationFrame(update);
+      });
+
+      navLinksEl.addEventListener("mouseleave", function() {
+        mouseX = null;
+        if (rafId) { cancelAnimationFrame(rafId); rafId = 0; }
+        // Add relax class BEFORE clearing inline sizes so the transition picks up the change
+        navLinksEl.classList.add("is-relaxing");
+        resetSizes();
+        if (relaxTimer) clearTimeout(relaxTimer);
+        relaxTimer = setTimeout(function() {
+          navLinksEl.classList.remove("is-relaxing");
+          relaxTimer = 0;
+        }, 500);
+      });
+
+      function onMQChange(e) {
+        if (!e.matches) {
+          if (relaxTimer) { clearTimeout(relaxTimer); relaxTimer = 0; }
+          navLinksEl.classList.remove("is-relaxing");
+          resetSizes();
+        }
+      }
+      if (typeof desktopMQ.addEventListener === "function") {
+        desktopMQ.addEventListener("change", onMQChange);
+      } else if (typeof desktopMQ.addListener === "function") {
+        desktopMQ.addListener(onMQChange);
+      }
+    }
+
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape" && nav.classList.contains("is-open")) {
+        toggleMenu(false);
+        navToggle.focus({ preventScroll: true });
+      }
+    });
+
+    window.addEventListener("hashchange", function() {
+      var hash = location.hash.replace("#", "");
+      if (hash) setCurrentNavLink(hash);
+    });
+
+    applyLanguage(detectLanguage(), false);
+    applyTheme(detectTheme(), false);
+    setupRevealObserver();
+    setupSectionObserver();
+    setupReadingProgress();
+    setupDockMagnification();
+    setupNavSpecular();
+  </script>
+</body>
+</html>
