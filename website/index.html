@@ -671,9 +671,174 @@
 
     .hero-actions {
       display: flex;
-      justify-content: center;
       gap: 14px;
       flex-wrap: wrap;
+    }
+
+    /* ══════════════════════════════════════════
+       HERO TWO-COLUMN GRID — text left · globe right
+       ══════════════════════════════════════════ */
+    .hero-grid {
+      position: relative;
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+      align-items: center;
+      gap: clamp(36px, 5vw, 88px);
+      z-index: 2;
+    }
+    .hero-grid .bookend-frame {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 0;
+      align-items: flex-start;
+      text-align: left;
+    }
+    .hero-grid .bookend-mark { justify-content: flex-start; }
+    .hero-grid .bookend-body {
+      align-items: flex-start;
+      text-align: left;
+    }
+    .hero-grid .bookend-title { text-align: left; }
+    .hero-grid .bookend-ornament { align-self: flex-start; }
+    .hero-grid .bookend-ornament::before { display: none; }
+    .hero-grid .bookend-ornament::after { width: 96px; }
+    .hero-grid .bookend-attribution { text-align: left; }
+    .hero-grid .bookend-source { text-align: left; }
+    .hero-grid .hero-actions { justify-content: flex-start; }
+
+    /* ── Globe plate ── */
+    .hero-globe {
+      --globe-fill: var(--bg-warm);
+      --globe-land: var(--accent-2-soft);
+      --globe-ink: var(--accent-2);
+      --globe-ink-soft: var(--muted-light);
+      --globe-ink-deep: var(--text-secondary);
+      --globe-shadow: rgba(31, 27, 22, 0.18);
+      --globe-highlight: rgba(255, 248, 230, 0.42);
+      position: relative;
+      width: 100%;
+      max-width: 540px;
+      margin: 0 auto;
+      aspect-ratio: 1 / 1;
+      justify-self: center;
+      opacity: 0;
+      transform: translateY(12px) scale(0.97);
+      transition:
+        opacity 1100ms var(--ease-out),
+        transform 1100ms var(--ease-out);
+    }
+    html[data-theme="dark"] .hero-globe {
+      --globe-fill: #221E1A;
+      --globe-land: rgba(212, 168, 102, 0.14);
+      --globe-ink: var(--accent-2);
+      --globe-ink-soft: var(--muted);
+      --globe-ink-deep: var(--text-secondary);
+      --globe-shadow: rgba(0, 0, 0, 0.45);
+      --globe-highlight: rgba(255, 240, 210, 0.10);
+    }
+    .fonts-loaded .hero-globe {
+      opacity: 1;
+      transform: none;
+      transition-delay: 240ms;
+    }
+    .hero-globe__plate {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .hero-globe__plate::before {
+      content: "";
+      position: absolute;
+      inset: -8%;
+      background:
+        radial-gradient(circle at 30% 28%, rgba(255, 250, 238, 0.45), transparent 55%),
+        radial-gradient(circle at 70% 75%, rgba(120, 95, 55, 0.05), transparent 60%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    html[data-theme="dark"] .hero-globe__plate::before {
+      background:
+        radial-gradient(circle at 30% 28%, rgba(255, 240, 210, 0.06), transparent 55%),
+        radial-gradient(circle at 70% 75%, rgba(0, 0, 0, 0.20), transparent 60%);
+    }
+    .hero-globe__compass {
+      position: absolute;
+      inset: -4%;
+      pointer-events: none;
+      color: var(--globe-ink-deep);
+      opacity: 0.85;
+    }
+    .hero-globe__canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .hero-globe__loading {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      font-family: var(--serif);
+      font-size: 11px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--globe-ink);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+    .hero-globe__loading.is-hidden { display: none; }
+    .hero-globe__meta {
+      position: absolute;
+      left: 50%;
+      bottom: -34px;
+      transform: translateX(-50%);
+      font-family: var(--serif);
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--globe-ink-deep);
+      opacity: 0.6;
+      white-space: nowrap;
+    }
+    .hero-globe__meta .dot {
+      display: inline-block;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: currentColor;
+      margin: 0 9px;
+      vertical-align: middle;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 48px;
+        text-align: center;
+      }
+      .hero-grid .bookend-frame,
+      .hero-grid .bookend-body { align-items: center; text-align: center; }
+      .hero-grid .bookend-mark { justify-content: center; }
+      .hero-grid .bookend-title,
+      .hero-grid .bookend-attribution,
+      .hero-grid .bookend-source { text-align: center; }
+      .hero-grid .bookend-ornament::before { display: block; }
+      .hero-grid .hero-actions { justify-content: center; }
+      .hero-globe { max-width: 380px; order: -1; }
+    }
+    @media (max-width: 560px) {
+      .hero-globe { max-width: 300px; }
+      .hero-globe__meta { font-size: 9px; letter-spacing: 0.26em; bottom: -28px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-globe[data-paused="true"] .hero-globe__canvas { /* JS pauses rotation loop */ }
     }
 
     .button {
@@ -2182,7 +2347,7 @@
               <span class="nav-link__icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 17 V4"/><path d="M14 4 Q17 5 19 7"/><ellipse cx="11" cy="17" rx="3" ry="2.2"/></svg>
               </span>
-              <span class="nav-link__text" data-i18n="nav.listening">我在聼</span>
+              <span class="nav-link__text" data-i18n="nav.listening">我在聽</span>
             </a>
             <a class="nav-link" href="#contact">
               <span class="nav-link__icon" aria-hidden="true">
@@ -2209,27 +2374,52 @@
     <main>
       <!-- ═══ HERO — Book Frontispiece (Opening Bookend) ═══ -->
       <section class="hero" id="home" aria-labelledby="hero-title">
-        <div class="bookend-frame">
-          <div class="bookend-mark">
-            <span class="bookend-year">MMXXVI</span>
-            <span class="bookend-mark-sep" aria-hidden="true"></span>
-            <span class="bookend-kicker" data-i18n="hero.kicker">Harrison的個人網站</span>
-          </div>
-
-          <div class="bookend-body">
-            <h1 class="bookend-title bookend-title--kinetic" id="hero-title"><span class="hero-word">Freiheit</span> <span class="hero-word als">als</span> <span class="hero-word">Autonomie</span></h1>
-            <div class="bookend-ornament" aria-hidden="true">
-              <span class="fleuron">❦</span>
+        <div class="hero-grid">
+          <div class="bookend-frame">
+            <div class="bookend-mark">
+              <span class="bookend-year">MMXXVI</span>
+              <span class="bookend-mark-sep" aria-hidden="true"></span>
+              <span class="bookend-kicker" data-i18n="hero.kicker">Harrison的個人網站</span>
             </div>
-            <p class="bookend-attribution">
-              <span class="bookend-dash">—</span><span class="bookend-author">Immanuel Kant</span>
-              <span class="bookend-source" data-i18n="hero.source">《道德形而上學的基礎》</span>
-            </p>
+
+            <div class="bookend-body">
+              <h1 class="bookend-title bookend-title--kinetic" id="hero-title"><span class="hero-word">Freiheit</span> <span class="hero-word als">als</span> <span class="hero-word">Autonomie</span></h1>
+              <div class="bookend-ornament" aria-hidden="true">
+                <span class="fleuron">❦</span>
+              </div>
+              <p class="bookend-attribution">
+                <span class="bookend-dash">—</span><span class="bookend-author">Immanuel Kant</span>
+                <span class="bookend-source" data-i18n="hero.source">《道德形而上學的基礎》</span>
+              </p>
+            </div>
+
+            <div class="hero-actions">
+              <a class="button primary" href="#about" data-i18n="hero.ctaPrimary">閱讀關於我</a>
+              <a class="button secondary" href="#contact" data-i18n="hero.ctaSecondary">聯繫我</a>
+            </div>
           </div>
 
-          <div class="hero-actions">
-            <a class="button primary" href="#about" data-i18n="hero.ctaPrimary">閱讀關於我</a>
-            <a class="button secondary" href="#contact" data-i18n="hero.ctaSecondary">聯繫我</a>
+          <div class="hero-globe" aria-hidden="true">
+            <div class="hero-globe__plate">
+              <svg class="hero-globe__compass" viewBox="0 0 100 100" aria-hidden="true">
+                <defs>
+                  <g id="hero-globe-tick"><line x1="50" y1="1" x2="50" y2="3.2" stroke="currentColor" stroke-width="0.18"/></g>
+                  <g id="hero-globe-tick-major"><line x1="50" y1="1" x2="50" y2="4.6" stroke="currentColor" stroke-width="0.32"/></g>
+                </defs>
+                <circle cx="50" cy="50" r="49" fill="none" stroke="currentColor" stroke-width="0.35" opacity="0.85"/>
+                <circle cx="50" cy="50" r="47.4" fill="none" stroke="currentColor" stroke-width="0.15" opacity="0.55"/>
+                <g id="hero-globe-ticks"></g>
+                <g font-family="var(--serif)" font-size="3.2" fill="currentColor" text-anchor="middle" opacity="0.85">
+                  <text x="50" y="7.6">N</text>
+                  <text x="93.2" y="51.1">E</text>
+                  <text x="50" y="95.4">S</text>
+                  <text x="6.8" y="51.1">W</text>
+                </g>
+              </svg>
+              <canvas class="hero-globe__canvas" id="hero-globe-canvas" width="1200" height="1200"></canvas>
+              <div class="hero-globe__loading" id="hero-globe-loading">Charting · Continents</div>
+              <div class="hero-globe__meta">Terrestrial Sphere<span class="dot"></span>Plate I</div>
+            </div>
           </div>
         </div>
       </section>
@@ -2385,15 +2575,13 @@
             <span class="section-watermark" aria-hidden="true">IV</span>
             <div class="section-head">
               <div class="section-title-row">
-                <h2 class="section-title" id="listening-title" data-i18n="listening.title">我在聼</h2>
+                <h2 class="section-title" id="listening-title" data-i18n="listening.title">我在聽</h2>
                 <span class="section-note" data-i18n="listening.note">播放器由 Spotify 提供，在不受支持的區域可能無法正常顯示</span>
               </div>
             </div>
             <div class="section-head-divider" aria-hidden="true"></div>
             <div class="listening-wrap">
-              <iframe class="spotify-embed" style="border-radius:12px" src="https://open.spotify.com/embed/track/0K2WjMLZYr09LKwurGRYRE?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Spotify player 1"></iframe>
-              <iframe class="spotify-embed" style="border-radius:12px" src="https://open.spotify.com/embed/track/5b7OgznPJJr1vHNYGyvxau?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Spotify player 2"></iframe>
-              <iframe class="spotify-embed" style="border-radius:12px" src="https://open.spotify.com/embed/track/3spdoTYpuCpmq19tuD0bOe?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Spotify player 3"></iframe>
+              <iframe class="spotify-embed" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2NipvFhfqAYOkbFVH323xv?utm_source=generator" width="100%" height="420" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Spotify 播放清單"></iframe>
             </div>
           </div>
         </div>
@@ -2476,7 +2664,7 @@
   <script>
     var translations = {
       "zh-Hant": {
-        nav: { home: "首頁", about: "關於我", stack: "工具", projects: "項目", listening: "我在聼", contact: "聯繫我" },
+        nav: { home: "首頁", about: "關於我", stack: "工具", projects: "項目", listening: "我在聽", contact: "聯繫我" },
         hero: {
           kicker: "Harrison的個人網站",
           source: "《道德形而上學的基礎》",
@@ -2509,7 +2697,7 @@
           p2Desc: "思想的札記。關於 AI、哲學與古典漢語的斷想與長文。"
         },
         listening: {
-          title: "我在聼",
+          title: "我在聽",
           note: ""
         },
         contact: {
@@ -3025,6 +3213,189 @@
     setupReadingProgress();
     setupDockMagnification();
     setupNavSpecular();
+  </script>
+
+  <!-- ═══ Hero globe — d3 + topojson orthographic projection ═══ -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js" defer></script>
+  <script defer>
+    window.addEventListener("DOMContentLoaded", function () {
+      if (typeof d3 === "undefined" || typeof topojson === "undefined") return;
+
+      // Compass tick marks
+      var ticks = document.getElementById("hero-globe-ticks");
+      if (ticks) {
+        for (var i = 0; i < 360; i += 2) {
+          var use = document.createElementNS("http://www.w3.org/2000/svg", "use");
+          use.setAttribute("href", i % 30 === 0 ? "#hero-globe-tick-major" : "#hero-globe-tick");
+          use.setAttribute("transform", "rotate(" + i + " 50 50)");
+          ticks.appendChild(use);
+        }
+      }
+
+      var canvas = document.getElementById("hero-globe-canvas");
+      var loadingEl = document.getElementById("hero-globe-loading");
+      var globeEl = canvas && canvas.closest(".hero-globe");
+      if (!canvas || !globeEl) return;
+      var ctx = canvas.getContext("2d");
+
+      function readPalette() {
+        var s = getComputedStyle(globeEl);
+        return {
+          fill:    s.getPropertyValue("--globe-fill").trim()      || "#F3EEE4",
+          land:    s.getPropertyValue("--globe-land").trim()      || "rgba(139,111,63,0.11)",
+          ink:     s.getPropertyValue("--globe-ink").trim()       || "#8B6F3F",
+          inkSoft: s.getPropertyValue("--globe-ink-soft").trim()  || "#A39A89",
+          inkDeep: s.getPropertyValue("--globe-ink-deep").trim()  || "#524838",
+          shadow:  s.getPropertyValue("--globe-shadow").trim()    || "rgba(31,27,22,0.18)",
+          highlight: s.getPropertyValue("--globe-highlight").trim() || "rgba(255,248,230,0.42)"
+        };
+      }
+      var C = readPalette();
+
+      var dims = { dpr: 1, w: 0, h: 0 };
+      function size() {
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        var r = canvas.getBoundingClientRect();
+        if (r.width === 0 || r.height === 0) return false;
+        canvas.width  = Math.round(r.width  * dpr);
+        canvas.height = Math.round(r.height * dpr);
+        dims = { dpr: dpr, w: r.width, h: r.height };
+        return true;
+      }
+
+      var projection = d3.geoOrthographic().clipAngle(90).precision(0.4);
+      var path = d3.geoPath(projection, ctx);
+      var graticule = d3.geoGraticule10();
+      var sphere = { type: "Sphere" };
+
+      function fitProjection() {
+        if (!size()) return;
+        ctx.setTransform(dims.dpr, 0, 0, dims.dpr, 0, 0);
+        var r = Math.min(dims.w, dims.h) / 2 - 8;
+        projection.scale(r).translate([dims.w / 2, dims.h / 2]);
+      }
+
+      var land = null;
+      var countries = null;
+
+      function draw() {
+        if (!dims.w) return;
+        var w = dims.w, h = dims.h;
+        ctx.clearRect(0, 0, w, h);
+
+        // Sphere with soft shadow
+        ctx.save();
+        ctx.beginPath();
+        path(sphere);
+        ctx.shadowColor = C.shadow;
+        ctx.shadowBlur = 28;
+        ctx.shadowOffsetY = 10;
+        ctx.fillStyle = C.fill;
+        ctx.fill();
+        ctx.restore();
+
+        // Graticule
+        ctx.beginPath();
+        path(graticule);
+        ctx.strokeStyle = C.inkSoft;
+        ctx.lineWidth = 0.6;
+        ctx.globalAlpha = 0.55;
+        ctx.stroke();
+        ctx.globalAlpha = 1;
+
+        // Land fill
+        if (land) {
+          ctx.beginPath();
+          path(land);
+          ctx.fillStyle = C.land;
+          ctx.fill();
+        }
+
+        // Country borders
+        if (countries) {
+          ctx.beginPath();
+          path(countries);
+          ctx.strokeStyle = C.ink;
+          ctx.lineWidth = 0.7;
+          ctx.stroke();
+        }
+
+        // Outer rim
+        ctx.beginPath();
+        path(sphere);
+        ctx.strokeStyle = C.inkDeep;
+        ctx.lineWidth = 1.1;
+        ctx.stroke();
+
+        // Highlight crescent
+        var cx = w / 2, cy = h / 2;
+        var rr = Math.min(w, h) / 2 - 8;
+        var grd = ctx.createRadialGradient(cx - rr * 0.35, cy - rr * 0.4, rr * 0.1, cx, cy, rr);
+        grd.addColorStop(0, C.highlight);
+        grd.addColorStop(0.55, "rgba(255,248,230,0)");
+        grd.addColorStop(1, "rgba(31,27,22,0.08)");
+        ctx.beginPath();
+        ctx.arc(cx, cy, rr, 0, Math.PI * 2);
+        ctx.fillStyle = grd;
+        ctx.fill();
+      }
+
+      var lambda = 20;
+      var phi = -18;
+      var last = performance.now();
+      var rafId = null;
+      var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function tick(now) {
+        var dt = (now - last) / 1000;
+        last = now;
+        lambda = (lambda + dt * 8) % 360;
+        projection.rotate([lambda, phi, 0]);
+        draw();
+        rafId = requestAnimationFrame(tick);
+      }
+
+      function start() {
+        if (rafId) cancelAnimationFrame(rafId);
+        last = performance.now();
+        if (reduceMotion) {
+          projection.rotate([lambda, phi, 0]);
+          draw();
+        } else {
+          rafId = requestAnimationFrame(tick);
+        }
+      }
+
+      fitProjection();
+      draw();
+
+      var resizeTimer;
+      window.addEventListener("resize", function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () { fitProjection(); draw(); }, 120);
+      });
+
+      // Re-read palette when the theme toggles
+      var themeObserver = new MutationObserver(function () {
+        C = readPalette();
+        draw();
+      });
+      themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+
+      fetch("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json")
+        .then(function (r) { return r.json(); })
+        .then(function (world) {
+          land = topojson.feature(world, world.objects.land);
+          countries = topojson.mesh(world, world.objects.countries);
+          if (loadingEl) loadingEl.classList.add("is-hidden");
+          start();
+        })
+        .catch(function (err) {
+          if (loadingEl) loadingEl.textContent = "Atlas unavailable";
+          console.error("[hero-globe]", err);
+        });
+    });
   </script>
 </body>
 </html>
